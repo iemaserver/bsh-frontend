@@ -24,6 +24,8 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
-
-.vercel
 .env*.local
+.claude/settings.local.json
+
+# Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
