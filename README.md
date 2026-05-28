@@ -1,6 +1,6 @@
 # IEM BSH Frontend
 
-React SPA for the IEM BSH Department website, built with Create React App + CRACO, styled with Tailwind CSS and shadcn/ui components, deployed on Vercel.
+React SPA for the IEM BSH Department website, built with Create React App + CRACO, styled with Tailwind CSS and shadcn/ui components, deployed on Firebase Hosting.
 
 ## Tech Stack
 
@@ -10,12 +10,12 @@ React SPA for the IEM BSH Department website, built with Create React App + CRAC
 - **HTTP Client**: Axios
 - **Animations**: Framer Motion
 - **Build Tool**: CRACO (Create React App Configuration Override)
-- **Deployment**: Vercel
+- **Deployment**: Firebase Hosting
 
 ## Project Structure
 
 ```
-frontend/
+/
 ├── public/
 │   └── puppeteer_assets/   # Static images (faculty photos, awards, etc.)
 ├── src/
@@ -36,22 +36,24 @@ frontend/
 │       ├── admin/           # Admin dashboard pages
 │       └── *.jsx            # Public pages
 ├── craco.config.js          # Webpack alias config (@/ → src/)
+├── firebase.json            # Firebase Hosting config (SPA rewrite)
+├── .firebaserc              # Firebase project alias (iem-bshs)
 └── package.json
 ```
 
 ## Environment Variables
 
-Create a `.env` file in the `frontend/` directory:
+Create a `.env` file in the project root:
 
 ```env
 # URL of the backend API (no trailing slash)
-REACT_APP_BACKEND_URL=https://your-backend.vercel.app
+REACT_APP_BACKEND_URL=https://bshs-api.iem.edu.in
 
 # Set to false to disable health check polling
 ENABLE_HEALTH_CHECK=false
 ```
 
-> In production, set `REACT_APP_BACKEND_URL` to your deployed backend URL in the Vercel dashboard.
+> In production, `REACT_APP_BACKEND_URL` is set directly in the GitHub Actions workflow — no hosting dashboard configuration is required.
 
 ## Local Development
 
@@ -65,21 +67,29 @@ npm start
 
 The app will be available at `http://localhost:3000`. Make sure the backend is running (or `REACT_APP_BACKEND_URL` points to the deployed backend).
 
-## Build & Deployment (Vercel)
+## Build & Deployment (Firebase Hosting)
 
 ```bash
 # Production build
 npm run build
 ```
 
-The `build` script uses `CI=false` to prevent warnings from failing the build. The output goes to the `build/` directory.
+The `build` script uses `CI=false` to prevent warnings from failing the build. The output goes to the `build/` directory, which Firebase Hosting serves as configured in `firebase.json`.
 
-For Vercel, connect the `frontend/` directory as the project root. Vercel will auto-detect Create React App and run `npm run build`. Set environment variables in the Vercel dashboard.
+### CI/CD
 
-### Required Vercel Environment Variables
+Deployments are automated via GitHub Actions:
 
-```
-REACT_APP_BACKEND_URL=https://your-backend.vercel.app
+- **Push to `main`** → builds and deploys to the live Firebase Hosting channel (project `iem-bshs`).
+- **Pull request** → builds and deploys to a temporary preview channel; a link is posted automatically to the PR.
+
+No manual `firebase deploy` is needed for normal releases.
+
+### Manual deploy (optional)
+
+```bash
+npm run build
+firebase deploy --only hosting
 ```
 
 ## Service Dependencies
@@ -87,7 +97,7 @@ REACT_APP_BACKEND_URL=https://your-backend.vercel.app
 | Service | Purpose |
 |---|---|
 | Backend API | All data (faculty, events, notices, etc.) |
-| Vercel | Hosting / CDN |
+| Firebase Hosting | Static hosting / CDN |
 
 No database, S3, or other services are required directly by the frontend — all data is fetched from the backend API.
 
