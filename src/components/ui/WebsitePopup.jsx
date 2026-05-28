@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://backend-node-roan.vercel.app/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://bshs-api.iem.edu.in/api';
 
 const WebsitePopup = () => {
     const [popup, setPopup] = useState(null);
