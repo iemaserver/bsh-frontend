@@ -32,11 +32,11 @@ export default function LoadingScreen({ progress, message }) {
             <motion.div
               animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="absolute inset-0 bg-blue-500/30 rounded-2xl blur-xl"
+              className="absolute inset-0 bg-amber-500/30 rounded-2xl blur-xl"
             />
             
             {/* Logo container - Clean blue */}
-            <div className="relative w-24 h-24 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl">
+            <div className="relative w-24 h-24 bg-red-600 rounded-2xl flex items-center justify-center shadow-2xl">
               <GraduationCap className="w-12 h-12 text-white" />
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function LoadingScreen({ progress, message }) {
           <div className="h-2 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
             {/* Progress fill - Clean blue */}
             <motion.div
-              className="h-full bg-blue-600 rounded-full"
+              className="h-full bg-red-600 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -107,7 +107,7 @@ export default function LoadingScreen({ progress, message }) {
               key={i}
               animate={{ opacity: [0.3, 1, 0.3] }}
               transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
-              className="w-2 h-2 bg-blue-600 rounded-full"
+              className="w-2 h-2 bg-red-600 rounded-full"
             />
           ))}
         </motion.div>
