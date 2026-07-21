@@ -37,7 +37,7 @@ export default function Consultancy() {
 
     return (
         <div className="min-h-screen pt-24 pb-16">
-            <section className="bg-gradient-to-br from-teal-500/10 via-cyan-500/10 to-blue-500/10 py-16">
+            <section className="bg-gradient-to-br from-teal-500/10 via-cyan-500/10 to-amber-500/10 py-16">
                 <div className="container mx-auto px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -156,8 +156,8 @@ export default function Consultancy() {
                                         <CardContent className="p-6">
                                             <div className="flex items-center justify-between gap-4">
                                                 <div className="flex items-center gap-4">
-                                                    <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                                        <FileText className="w-6 h-6 text-blue-600" />
+                                                    <div className="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                        <FileText className="w-6 h-6 text-red-600" />
                                                     </div>
                                                     <div>
                                                         <h3 className="font-heading font-semibold">
