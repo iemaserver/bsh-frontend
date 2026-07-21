@@ -46,9 +46,10 @@ export default function Home() {
     } = useData();
 
     const stats = [
-        { icon: Users, label: 'Faculty Members', value: '35', suffix: '+' },
+        { icon: Users, label: 'Faculty Members', value: '55', suffix: '+' },
         { icon: GraduationCap, label: 'Years of Excellence', value: '20', suffix: '+' },
-        { icon: BookOpen, label: 'Research Publications', value: '500', suffix: '+' },
+        { icon: BookOpen, label: 'Research Publications', value: '600', suffix: '+' },
+        { icon: Award, label: 'Patents', value: '50', suffix: '+' },
         { icon: Award, label: 'NAAC Accreditation', value: 'Grade A', suffix: '' },
     ];
 
@@ -172,7 +173,7 @@ export default function Home() {
             {/* STATS SECTION - CLEAN BLUE */}
             <section className="py-20 bg-red-600">
                 <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
                         {stats.map((stat, index) => (
                             <motion.div
                                 key={stat.label}
