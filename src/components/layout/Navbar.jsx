@@ -81,7 +81,7 @@ export default function Navbar() {
                     <Link to="/" className="flex items-center gap-3 group">
                         <div
                             className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm"
-                            style={{ background: "linear-gradient(135deg, #7C3AED 0%, #2563EB 50%, #0F9E8E 100%)" }}
+                            style={{ background: "linear-gradient(135deg, #BA1E1E 0%, #7A1B2C 55%, #D4A017 100%)" }}
                         >
                             <GraduationCap className="w-6 h-6 text-white" />
                         </div>
@@ -189,8 +189,8 @@ export default function Navbar() {
                                                 className={cn(
                                                     "px-4 py-3 text-sm font-medium transition-colors border-b border-slate-50",
                                                     isActivePath(item.path)
-                                                        ? "text-blue-600 bg-blue-50"
-                                                        : "text-slate-700 hover:text-blue-600 hover:bg-slate-50"
+                                                        ? "text-red-600 bg-amber-50"
+                                                        : "text-slate-700 hover:text-red-600 hover:bg-slate-50"
                                                 )}
                                             >
                                                 {item.label}
@@ -209,8 +209,8 @@ export default function Navbar() {
                                                         className={cn(
                                                             "block px-8 py-2.5 text-sm transition-colors border-b border-slate-100/50",
                                                             isActivePath(child.path)
-                                                                ? "text-blue-600 bg-blue-50/50 font-medium"
-                                                                : "text-slate-600 hover:text-blue-600 hover:bg-slate-100/50"
+                                                                ? "text-red-600 bg-amber-50/50 font-medium"
+                                                                : "text-slate-600 hover:text-red-600 hover:bg-slate-100/50"
                                                         )}
                                                     >
                                                         {child.label}
