@@ -2,60 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* VIBRANT MULTICOLOR ACADEMIC THEME - IEM BSH */
+/* RED · GOLD · WHITE ACADEMIC THEME - IEM BSH */
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --foreground: 222 30% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 222 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 222 30% 12%;
 
-    /* Primary - Indigo/Violet (was navy) */
-    --primary: 243 75% 45%;
-    /* #3730D9-ish indigo */
+    /* Primary - Deep Crimson Red */
+    --primary: 0 72% 42%;
+    /* #BA1E1E */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Vivid Teal */
-    --secondary: 174 80% 36%;
-    /* #0F9E8E */
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary - Rich Gold */
+    --secondary: 43 74% 49%;
+    /* #D4A017 */
+    --secondary-foreground: 222 30% 12%;
 
-    /* Accent - Warm Coral/Amber */
-    --accent: 27 96% 55%;
-    /* #F5820B */
+    /* Accent - Deep Maroon (for depth/contrast) */
+    --accent: 350 65% 30%;
+    /* #7A1B2C */
     --accent-foreground: 0 0% 100%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 30 20% 96%;
+    --muted-foreground: 220 10% 40%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 243 75% 45%;
+    --border: 30 20% 90%;
+    --input: 30 20% 90%;
+    --ring: 0 72% 42%;
 
     --radius: 0.75rem;
 
-    /* Extra palette — a rotating set of section colors used across the site */
-    --hue-violet: 258 90% 58%;
-    /* #7C3AED */
-    --hue-blue: 217 91% 55%;
-    /* #2563EB */
-    --hue-teal: 174 80% 36%;
-    /* #0F9E8E */
-    --hue-green: 142 71% 40%;
-    /* #16A34A */
+    /* Extra palette — red/gold family variations used across sections/cards
+       so the site reads as "multicolor" while staying on-brand */
+    --hue-red: 0 72% 42%;
+    /* #BA1E1E crimson */
+    --hue-crimson: 350 78% 47%;
+    /* #D31145 */
+    --hue-gold: 43 74% 49%;
+    /* #D4A017 */
     --hue-amber: 38 92% 50%;
     /* #F59E0B */
-    --hue-coral: 14 90% 56%;
-    /* #F0532A */
-    --hue-pink: 330 81% 55%;
-    /* #E11D74 */
+    --hue-maroon: 350 65% 30%;
+    /* #7A1B2C */
+    --hue-navy: 222 47% 20%;
+    /* #1B2A4A — used sparingly for contrast/depth */
+    --hue-charcoal: 220 15% 25%;
+    /* #34383F */
   }
 }
 
@@ -99,32 +100,32 @@
 }
 
 .card-bordered-violet {
-  @apply bg-white border-l-4 border-l-violet-600 rounded-r-lg shadow-sm;
+  @apply bg-white border-l-4 border-l-red-700 rounded-r-lg shadow-sm;
 }
 
 .card-bordered-teal {
-  @apply bg-white border-l-4 border-l-teal-600 rounded-r-lg shadow-sm;
+  @apply bg-white border-l-4 border-l-yellow-600 rounded-r-lg shadow-sm;
 }
 
 .card-bordered-coral {
-  @apply bg-white border-l-4 border-l-orange-600 rounded-r-lg shadow-sm;
+  @apply bg-white border-l-4 border-l-rose-700 rounded-r-lg shadow-sm;
 }
 
 .card-bordered-pink {
-  @apply bg-white border-l-4 border-l-pink-600 rounded-r-lg shadow-sm;
+  @apply bg-white border-l-4 border-l-amber-600 rounded-r-lg shadow-sm;
 }
 
 .card-bordered-green {
-  @apply bg-white border-l-4 border-l-green-600 rounded-r-lg shadow-sm;
+  @apply bg-white border-l-4 border-l-red-900 rounded-r-lg shadow-sm;
 }
 
 /* Cycle through these 5 classes (nth-child) to give a grid of cards a
-   multicolor rainbow look instead of one repeated color */
-.card-rainbow:nth-child(5n+1) { @apply border-l-4 border-l-blue-600; }
-.card-rainbow:nth-child(5n+2) { @apply border-l-4 border-l-violet-600; }
-.card-rainbow:nth-child(5n+3) { @apply border-l-4 border-l-teal-600; }
-.card-rainbow:nth-child(5n+4) { @apply border-l-4 border-l-orange-600; }
-.card-rainbow:nth-child(5n+5) { @apply border-l-4 border-l-pink-600; }
+   red/gold multicolor look instead of one repeated color */
+.card-rainbow:nth-child(5n+1) { @apply border-l-4 border-l-red-700; }
+.card-rainbow:nth-child(5n+2) { @apply border-l-4 border-l-amber-600; }
+.card-rainbow:nth-child(5n+3) { @apply border-l-4 border-l-rose-700; }
+.card-rainbow:nth-child(5n+4) { @apply border-l-4 border-l-yellow-600; }
+.card-rainbow:nth-child(5n+5) { @apply border-l-4 border-l-red-900; }
 
 /* ===== PROFESSIONAL SECTIONS ===== */
 .section-navy {
@@ -189,38 +190,38 @@
 
 /* ===== HERO ===== */
 .hero-professional {
-  background: linear-gradient(135deg, #1E1B4B 0%, #4C1D95 30%, #1E40AF 65%, #0F9E8E 100%);
+  background: linear-gradient(135deg, #3B0A0A 0%, #7A1B2C 30%, #BA1E1E 65%, #D4A017 100%);
 }
 
 .hero-pattern {
   background-image: 
-    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.25) 0%, transparent 45%),
-    radial-gradient(circle at 85% 30%, rgba(37, 99, 235, 0.25) 0%, transparent 45%),
-    radial-gradient(circle at 50% 90%, rgba(15, 158, 142, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 90% 85%, rgba(240, 83, 42, 0.15) 0%, transparent 40%);
+    radial-gradient(circle at 15% 20%, rgba(212, 160, 23, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(186, 30, 30, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(122, 27, 44, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 90% 85%, rgba(212, 160, 23, 0.18) 0%, transparent 40%);
 }
 
 /* Alternate colorful section gradients — use to give different pages/sections
    their own identity instead of every section looking the same */
 .hero-gradient-violet {
-  background: linear-gradient(135deg, #2E1065 0%, #6D28D9 50%, #7C3AED 100%);
+  background: linear-gradient(135deg, #3B0A0A 0%, #7A1B2C 50%, #BA1E1E 100%);
 }
 
 .hero-gradient-teal {
-  background: linear-gradient(135deg, #042F2E 0%, #0F766E 50%, #0F9E8E 100%);
+  background: linear-gradient(135deg, #5C4A0A 0%, #A5790F 50%, #D4A017 100%);
 }
 
 .hero-gradient-coral {
-  background: linear-gradient(135deg, #7C2D12 0%, #C2410C 50%, #F0532A 100%);
+  background: linear-gradient(135deg, #5C0F0F 0%, #9F1239 50%, #E11D48 100%);
 }
 
 .hero-gradient-blue {
-  background: linear-gradient(135deg, #172554 0%, #1E40AF 50%, #2563EB 100%);
+  background: linear-gradient(135deg, #3B0A0A 0%, #7A1B2C 50%, #BA1E1E 100%);
 }
 
 /* Text gradient for headings/logo accents */
 .text-gradient-rainbow {
-  background: linear-gradient(90deg, #7C3AED, #2563EB, #0F9E8E, #F59E0B, #F0532A);
+  background: linear-gradient(90deg, #BA1E1E, #D31145, #D4A017, #F59E0B, #7A1B2C);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -254,36 +255,36 @@
 }
 
 .stat-icon-violet {
-  @apply bg-violet-100 text-violet-600;
+  @apply bg-red-100 text-red-700;
 }
 
 .stat-icon-teal {
-  @apply bg-teal-100 text-teal-600;
+  @apply bg-yellow-100 text-yellow-700;
 }
 
 .stat-icon-coral {
-  @apply bg-orange-100 text-orange-600;
+  @apply bg-rose-100 text-rose-700;
 }
 
 .stat-icon-pink {
-  @apply bg-pink-100 text-pink-600;
+  @apply bg-amber-100 text-amber-700;
 }
 
 .stat-icon-green {
-  @apply bg-green-100 text-green-600;
+  @apply bg-red-100 text-red-900;
 }
 
-/* Cycle stat/feature icons through a rainbow automatically */
-.stat-icon-rainbow:nth-child(6n+1) { @apply bg-blue-100 text-blue-600; }
-.stat-icon-rainbow:nth-child(6n+2) { @apply bg-violet-100 text-violet-600; }
-.stat-icon-rainbow:nth-child(6n+3) { @apply bg-teal-100 text-teal-600; }
-.stat-icon-rainbow:nth-child(6n+4) { @apply bg-orange-100 text-orange-600; }
-.stat-icon-rainbow:nth-child(6n+5) { @apply bg-pink-100 text-pink-600; }
-.stat-icon-rainbow:nth-child(6n+6) { @apply bg-green-100 text-green-600; }
+/* Cycle stat/feature icons through the red/gold family automatically */
+.stat-icon-rainbow:nth-child(6n+1) { @apply bg-red-100 text-red-700; }
+.stat-icon-rainbow:nth-child(6n+2) { @apply bg-amber-100 text-amber-700; }
+.stat-icon-rainbow:nth-child(6n+3) { @apply bg-yellow-100 text-yellow-700; }
+.stat-icon-rainbow:nth-child(6n+4) { @apply bg-rose-100 text-rose-700; }
+.stat-icon-rainbow:nth-child(6n+5) { @apply bg-orange-100 text-orange-700; }
+.stat-icon-rainbow:nth-child(6n+6) { @apply bg-red-200 text-red-900; }
 
 /* ===== PROFESSIONAL DIVIDERS ===== */
 .divider-professional {
-  @apply w-20 h-1 bg-blue-600 rounded-full mb-6;
+  @apply w-20 h-1 bg-red-700 rounded-full mb-6;
 }
 
 .divider-gold {
@@ -295,15 +296,15 @@
   height: 4px;
   margin-bottom: 1.5rem;
   border-radius: 9999px;
-  background: linear-gradient(90deg, #7C3AED, #2563EB, #0F9E8E, #F59E0B, #F0532A);
+  background: linear-gradient(90deg, #BA1E1E, #D31145, #D4A017, #F59E0B, #7A1B2C);
 }
 
 .divider-violet {
-  @apply w-20 h-1 bg-violet-600 rounded-full mb-6;
+  @apply w-20 h-1 bg-rose-700 rounded-full mb-6;
 }
 
 .divider-teal {
-  @apply w-20 h-1 bg-teal-600 rounded-full mb-6;
+  @apply w-20 h-1 bg-yellow-600 rounded-full mb-6;
 }
 
 .divider-center {
@@ -380,23 +381,23 @@
 }
 
 .badge-violet {
-  @apply bg-violet-100 text-violet-700;
+  @apply bg-red-100 text-red-700;
 }
 
 .badge-teal {
-  @apply bg-teal-100 text-teal-700;
+  @apply bg-yellow-100 text-yellow-700;
 }
 
 .badge-coral {
-  @apply bg-orange-100 text-orange-700;
+  @apply bg-rose-100 text-rose-700;
 }
 
 .badge-pink {
-  @apply bg-pink-100 text-pink-700;
+  @apply bg-amber-100 text-amber-700;
 }
 
 .badge-green {
-  @apply bg-green-100 text-green-700;
+  @apply bg-red-200 text-red-900;
 }
 
 /* ===== PROFESSIONAL FOOTER ===== */
