@@ -6,6 +6,20 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useData } from '@/hooks/useData';
 
+const ABOUT_TEXT = `Institute of Engineering & Management, Kolkata was established with an aim of providing quality higher education with international standards. The Department of Basic Sciences & Humanities is the First Year Phase of every student studying in the Engineering field. Our department focuses on the proper upbringing of the students from the basic level and it has a plethora of experienced and learned teachers who strongly and constantly nurture the students. This department strives to reach out to the zenith of perfection through an earnest academic pursuit for excellence. The highly motivated youngsters of the campus are the constant source of our pride. In order to encourage the students to participate in various departmental activities, our college gives access to students to make use of the multiple facilities provided in the campus. Our campus has a cosmopolitan atmosphere with students from all corners of the globe. The concerned faculties always take care for an individual's holistic development to make a fruitful contribution to the society.`;
+
+const VISION_TEXT = `The vision of Basic Science and Humanities Department is to provide a comprehensive outcome based education and build a strong foundation in mathematics, natural sciences, and humanities that prepares students to be successful and responsible engineers who can make a positive impact on the society.`;
+
+const MISSION_TEXT = `The mission of Basic Science and Humanities Department is to equip students with the knowledge, skills and perspectives for being successful engineers.
+To develop the research mind set, critical thinking abilities and problem-solving skills in students to resolve real-world problems and foster an understanding of the social and ethical implications of technology.
+To prepare students for the global sustainability by encouraging innovation, entrepreneurship, international awareness, cultural sensitivity through value added courses and study abroad programs.`;
+
+const HOD_NAME = `Prof. Prabir Kumar Das`;
+
+const HOD_MESSAGE = `Welcome to the Department of Basic Sciences and Humanities at Institute of Engineering & Management, Kolkata. We at IEM believe that research and teaching go hand in hand and thus practice research-driven teaching. This way we keep our students aware of the current technological developments. Our faculty members have excellent academic credentials and are regarded highly in their respective subjects. The department not only offers the students to explore fundamental knowledge of prescribed syllabus but also promotes applied and interdisciplinary research by organising various International conferences & competitions. We also emphasize on the overall personality and soft skill development through interactive sessions taken by faculties & eminent speakers.
+We look forward towards success of our students with determination & dedication because for us
+"Sky's the limit!"`;
+
 export default function About() {
     const { 
         department, 
@@ -70,7 +84,7 @@ export default function About() {
                                 <h2 className="font-heading text-2xl font-bold">About Our Department</h2>
                             </div>
                             <p className="text-muted-foreground leading-relaxed text-lg">
-                                {department?.about}
+                                {department?.about || ABOUT_TEXT}
                             </p>
                         </Card>
                     </motion.div>
@@ -101,7 +115,7 @@ export default function About() {
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        {department?.vision}
+                                        {department?.vision || VISION_TEXT}
                                     </p>
                                 </CardContent>
                             </Card>
@@ -123,8 +137,8 @@ export default function About() {
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-muted-foreground leading-relaxed">
-                                        {department?.mission}
+                                    <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                                        {department?.mission || MISSION_TEXT}
                                     </p>
                                 </CardContent>
                             </Card>
@@ -163,14 +177,14 @@ export default function About() {
                                         />
                                     </div>
                                     <div className="mt-4 text-center">
-                                        <p className="font-heading font-bold text-lg">{department?.hodName}</p>
+                                        <p className="font-heading font-bold text-lg">{department?.hodName || HOD_NAME}</p>
                                         <p className="text-sm text-muted-foreground">Head of Department</p>
                                     </div>
                                 </motion.div>
                                 <div className="flex-1">
                                     <Quote className="w-12 h-12 text-primary/20 mb-4" />
-                                    <p className="text-muted-foreground leading-relaxed text-lg italic">
-                                        {department?.hodMessage}
+                                    <p className="text-muted-foreground leading-relaxed text-lg italic whitespace-pre-line">
+                                        {department?.hodMessage || HOD_MESSAGE}
                                     </p>
                                 </div>
                             </div>
