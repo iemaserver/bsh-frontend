@@ -98,11 +98,11 @@ export default function Facilities() {
         >
             {/* Hero */}
             <section className="relative py-20 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-indigo-500/5 to-violet-500/5" />
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-indigo-500/5 to-violet-500/5" />
                 <motion.div 
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 8, repeat: Infinity }}
-                    className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+                    className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"
                 />
                 <motion.div 
                     animate={{ scale: [1.2, 1, 1.2] }}
@@ -118,7 +118,7 @@ export default function Facilities() {
                     >
                         <motion.div
                             whileHover={{ scale: 1.1, rotate: 5 }}
-                            className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl shadow-blue-500/20"
+                            className="w-20 h-20 bg-gradient-to-br from-amber-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl shadow-amber-500/20"
                         >
                             <Building2 className="w-10 h-10 text-white" />
                         </motion.div>
