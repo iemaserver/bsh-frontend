@@ -37,15 +37,15 @@ export default function Journals() {
 
     return (
         <div className="min-h-screen pt-24 pb-16">
-            <section className="bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-purple-500/10 py-16">
+            <section className="bg-gradient-to-br from-amber-500/10 via-indigo-500/10 to-purple-500/10 py-16">
                 <div className="container mx-auto px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="text-center"
                     >
-                        <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <BookOpen className="w-8 h-8 text-blue-600" />
+                        <div className="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <BookOpen className="w-8 h-8 text-red-600" />
                         </div>
                         <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
                             Journals & Conferences
