@@ -79,8 +79,11 @@ export default function Navbar() {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-3 group">
-                        <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-                            <GraduationCap className="w-6 h-6 text-primary-foreground" />
+                        <div
+                            className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm"
+                            style={{ background: "linear-gradient(135deg, #7C3AED 0%, #2563EB 50%, #0F9E8E 100%)" }}
+                        >
+                            <GraduationCap className="w-6 h-6 text-white" />
                         </div>
                         <div>
                             <span className="font-heading font-bold text-lg text-foreground">IEM BSH</span>
