@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* PRESTIGIOUS ACADEMIC THEME - IEM BSH */
+/* VIBRANT MULTICOLOR ACADEMIC THEME - IEM BSH */
 @layer base {
   :root {
-    /* Professional Navy & Gold Palette */
     --background: 0 0% 100%;
-    /* Pure white */
     --foreground: 222 47% 11%;
-    /* Dark navy text */
 
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
@@ -17,34 +14,48 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* Primary - Deep Navy Blue */
-    --primary: 222 47% 11%;
-    /* #0F172A */
+    /* Primary - Indigo/Violet (was navy) */
+    --primary: 243 75% 45%;
+    /* #3730D9-ish indigo */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Royal Blue */
-    --secondary: 221 83% 53%;
-    /* #2563EB */
+    /* Secondary - Vivid Teal */
+    --secondary: 174 80% 36%;
+    /* #0F9E8E */
     --secondary-foreground: 0 0% 100%;
 
-    /* Accent - Prestige Gold */
-    --accent: 43 96% 56%;
-    /* #F59E0B */
-    --accent-foreground: 222 47% 11%;
+    /* Accent - Warm Coral/Amber */
+    --accent: 27 96% 55%;
+    /* #F5820B */
+    --accent-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%;
-    /* Light gray */
     --muted-foreground: 215 16% 47%;
-    /* Medium gray */
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 221 83% 53%;
+    --ring: 243 75% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Extra palette — a rotating set of section colors used across the site */
+    --hue-violet: 258 90% 58%;
+    /* #7C3AED */
+    --hue-blue: 217 91% 55%;
+    /* #2563EB */
+    --hue-teal: 174 80% 36%;
+    /* #0F9E8E */
+    --hue-green: 142 71% 40%;
+    /* #16A34A */
+    --hue-amber: 38 92% 50%;
+    /* #F59E0B */
+    --hue-coral: 14 90% 56%;
+    /* #F0532A */
+    --hue-pink: 330 81% 55%;
+    /* #E11D74 */
   }
 }
 
@@ -86,6 +97,34 @@
 .card-bordered-accent {
   @apply bg-white border-l-4 border-l-amber-500 rounded-r-lg shadow-sm;
 }
+
+.card-bordered-violet {
+  @apply bg-white border-l-4 border-l-violet-600 rounded-r-lg shadow-sm;
+}
+
+.card-bordered-teal {
+  @apply bg-white border-l-4 border-l-teal-600 rounded-r-lg shadow-sm;
+}
+
+.card-bordered-coral {
+  @apply bg-white border-l-4 border-l-orange-600 rounded-r-lg shadow-sm;
+}
+
+.card-bordered-pink {
+  @apply bg-white border-l-4 border-l-pink-600 rounded-r-lg shadow-sm;
+}
+
+.card-bordered-green {
+  @apply bg-white border-l-4 border-l-green-600 rounded-r-lg shadow-sm;
+}
+
+/* Cycle through these 5 classes (nth-child) to give a grid of cards a
+   multicolor rainbow look instead of one repeated color */
+.card-rainbow:nth-child(5n+1) { @apply border-l-4 border-l-blue-600; }
+.card-rainbow:nth-child(5n+2) { @apply border-l-4 border-l-violet-600; }
+.card-rainbow:nth-child(5n+3) { @apply border-l-4 border-l-teal-600; }
+.card-rainbow:nth-child(5n+4) { @apply border-l-4 border-l-orange-600; }
+.card-rainbow:nth-child(5n+5) { @apply border-l-4 border-l-pink-600; }
 
 /* ===== PROFESSIONAL SECTIONS ===== */
 .section-navy {
@@ -148,15 +187,43 @@
   @apply bg-slate-900 text-white;
 }
 
-/* ===== PROFESSIONAL HERO ===== */
+/* ===== HERO ===== */
 .hero-professional {
-  background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #1E40AF 100%);
+  background: linear-gradient(135deg, #1E1B4B 0%, #4C1D95 30%, #1E40AF 65%, #0F9E8E 100%);
 }
 
 .hero-pattern {
   background-image: 
-    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(30, 58, 138, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(37, 99, 235, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(15, 158, 142, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 90% 85%, rgba(240, 83, 42, 0.15) 0%, transparent 40%);
+}
+
+/* Alternate colorful section gradients — use to give different pages/sections
+   their own identity instead of every section looking the same */
+.hero-gradient-violet {
+  background: linear-gradient(135deg, #2E1065 0%, #6D28D9 50%, #7C3AED 100%);
+}
+
+.hero-gradient-teal {
+  background: linear-gradient(135deg, #042F2E 0%, #0F766E 50%, #0F9E8E 100%);
+}
+
+.hero-gradient-coral {
+  background: linear-gradient(135deg, #7C2D12 0%, #C2410C 50%, #F0532A 100%);
+}
+
+.hero-gradient-blue {
+  background: linear-gradient(135deg, #172554 0%, #1E40AF 50%, #2563EB 100%);
+}
+
+/* Text gradient for headings/logo accents */
+.text-gradient-rainbow {
+  background: linear-gradient(90deg, #7C3AED, #2563EB, #0F9E8E, #F59E0B, #F0532A);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* ===== PROFESSIONAL STATS ===== */
@@ -186,6 +253,34 @@
   @apply bg-slate-100 text-slate-600;
 }
 
+.stat-icon-violet {
+  @apply bg-violet-100 text-violet-600;
+}
+
+.stat-icon-teal {
+  @apply bg-teal-100 text-teal-600;
+}
+
+.stat-icon-coral {
+  @apply bg-orange-100 text-orange-600;
+}
+
+.stat-icon-pink {
+  @apply bg-pink-100 text-pink-600;
+}
+
+.stat-icon-green {
+  @apply bg-green-100 text-green-600;
+}
+
+/* Cycle stat/feature icons through a rainbow automatically */
+.stat-icon-rainbow:nth-child(6n+1) { @apply bg-blue-100 text-blue-600; }
+.stat-icon-rainbow:nth-child(6n+2) { @apply bg-violet-100 text-violet-600; }
+.stat-icon-rainbow:nth-child(6n+3) { @apply bg-teal-100 text-teal-600; }
+.stat-icon-rainbow:nth-child(6n+4) { @apply bg-orange-100 text-orange-600; }
+.stat-icon-rainbow:nth-child(6n+5) { @apply bg-pink-100 text-pink-600; }
+.stat-icon-rainbow:nth-child(6n+6) { @apply bg-green-100 text-green-600; }
+
 /* ===== PROFESSIONAL DIVIDERS ===== */
 .divider-professional {
   @apply w-20 h-1 bg-blue-600 rounded-full mb-6;
@@ -193,6 +288,22 @@
 
 .divider-gold {
   @apply w-20 h-1 bg-amber-500 rounded-full mb-6;
+}
+
+.divider-rainbow {
+  width: 5rem;
+  height: 4px;
+  margin-bottom: 1.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #7C3AED, #2563EB, #0F9E8E, #F59E0B, #F0532A);
+}
+
+.divider-violet {
+  @apply w-20 h-1 bg-violet-600 rounded-full mb-6;
+}
+
+.divider-teal {
+  @apply w-20 h-1 bg-teal-600 rounded-full mb-6;
 }
 
 .divider-center {
@@ -266,6 +377,26 @@
 
 .badge-navy {
   @apply bg-slate-900 text-white;
+}
+
+.badge-violet {
+  @apply bg-violet-100 text-violet-700;
+}
+
+.badge-teal {
+  @apply bg-teal-100 text-teal-700;
+}
+
+.badge-coral {
+  @apply bg-orange-100 text-orange-700;
+}
+
+.badge-pink {
+  @apply bg-pink-100 text-pink-700;
+}
+
+.badge-green {
+  @apply bg-green-100 text-green-700;
 }
 
 /* ===== PROFESSIONAL FOOTER ===== */
