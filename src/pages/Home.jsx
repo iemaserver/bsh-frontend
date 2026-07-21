@@ -9,6 +9,13 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useData } from '@/hooks/useData';
+import hodImage from '@/assets/hod-prabir-kumar-das.jpg';
+
+const HOD_NAME = `Prof. Prabir Kumar Das`;
+
+const HOD_MESSAGE = `Welcome to the Department of Basic Sciences and Humanities at Institute of Engineering & Management, Kolkata. We at IEM believe that research and teaching go hand in hand and thus practice research-driven teaching. This way we keep our students aware of the current technological developments. Our faculty members have excellent academic credentials and are regarded highly in their respective subjects. The department not only offers the students to explore fundamental knowledge of prescribed syllabus but also promotes applied and interdisciplinary research by organising various International conferences & competitions. We also emphasize on the overall personality and soft skill development through interactive sessions taken by faculties & eminent speakers.
+We look forward towards success of our students with determination & dedication because for us
+"Sky's the limit!"`;
 
 // Counter animation component
 function AnimatedCounter({ target, suffix = '' }) {
@@ -224,8 +231,8 @@ export default function Home() {
                                     <div className="flex flex-col md:flex-row gap-8">
                                         <div className="w-48 h-56 bg-slate-200 rounded-lg overflow-hidden flex-shrink-0">
                                             <img
-                                                src={faculty?.[0]?.imageUrl || ''}
-                                                alt={department?.hodName || 'HOD'}
+                                                src={department?.logoUrl || hodImage}
+                                                alt={department?.hodName || HOD_NAME}
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>
@@ -239,13 +246,13 @@ export default function Home() {
                                                 </span>
                                             </div>
                                             <h3 className="text-2xl font-bold text-slate-900 mb-1">
-                                                {department?.hodName}
+                                                {department?.hodName || HOD_NAME}
                                             </h3>
                                             <p className="text-slate-500 font-medium mb-4">
                                                 Head of Department
                                             </p>
                                             <p className="text-slate-600 leading-relaxed mb-6">
-                                                {department?.hodMessage?.substring(0, 300)}...
+                                                {(department?.hodMessage || HOD_MESSAGE).substring(0, 300)}...
                                             </p>
                                             <Button variant="outline" className="group" asChild>
                                                 <Link to="/about">
