@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useData } from '@/hooks/useData';
+import hodImage from '@/assets/hod-prabir-kumar-das.jpg';
 
 const ABOUT_TEXT = `Institute of Engineering & Management, Kolkata was established with an aim of providing quality higher education with international standards. The Department of Basic Sciences & Humanities is the First Year Phase of every student studying in the Engineering field. Our department focuses on the proper upbringing of the students from the basic level and it has a plethora of experienced and learned teachers who strongly and constantly nurture the students. This department strives to reach out to the zenith of perfection through an earnest academic pursuit for excellence. The highly motivated youngsters of the campus are the constant source of our pride. In order to encourage the students to participate in various departmental activities, our college gives access to students to make use of the multiple facilities provided in the campus. Our campus has a cosmopolitan atmosphere with students from all corners of the globe. The concerned faculties always take care for an individual's holistic development to make a fruitful contribution to the society.`;
 
@@ -171,8 +172,8 @@ export default function About() {
                                 >
                                     <div className="w-40 h-48 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden shadow-xl">
                                         <img
-                                            src={department?.logoUrl || ''}
-                                            alt={department?.hodName}
+                                            src={department?.logoUrl || hodImage}
+                                            alt={department?.hodName || HOD_NAME}
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
