@@ -4,6 +4,7 @@ import { Search, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
+import { FACULTY_FALLBACK } from '@/data/facultyData';
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -23,12 +24,12 @@ export default function Faculty() {
     const [filteredFaculty, setFilteredFaculty] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
 
-    // Set faculty data from context when available
+    // Set faculty data from context when available; fall back to the
+    // built-in roster (FACULTY_FALLBACK) if the database list is empty
     useEffect(() => {
-        if (facultyData) {
-            setFaculty(facultyData);
-            setFilteredFaculty(facultyData);
-        }
+        const list = (facultyData && facultyData.length > 0) ? facultyData : FACULTY_FALLBACK;
+        setFaculty(list);
+        setFilteredFaculty(list);
     }, [facultyData]);
 
     // Filter faculty based on search
@@ -40,6 +41,7 @@ export default function Faculty() {
                 (member) =>
                     member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                     member.designation?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    member.subject?.toLowerCase().includes(searchQuery.toLowerCase()) ||
                     member.researchArea?.toLowerCase().includes(searchQuery.toLowerCase())
             );
             setFilteredFaculty(filtered);
@@ -135,7 +137,7 @@ export default function Faculty() {
                                                 {member.name}
                                             </h3>
                                             <p className="text-sm text-accent font-medium mt-2">
-                                                {member.designation}
+                                                {member.designation || member.subject}
                                             </p>
                                             {member.qualification && (
                                                 <p className="text-xs text-muted-foreground mt-1">
