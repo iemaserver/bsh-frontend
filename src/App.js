@@ -103,6 +103,8 @@ function AppContent() {
                         <Route path="/faculty" element={<PublicLayout><Faculty /></PublicLayout>} />
                         <Route path="/academics" element={<PublicLayout><Academics /></PublicLayout>} />
                         <Route path="/academics/syllabus" element={<PublicLayout><Academics /></PublicLayout>} />
+                        <Route path="/academics/academic-calendar" element={<PublicLayout><Academics /></PublicLayout>} />
+                        <Route path="/academics/holiday-list" element={<PublicLayout><Academics /></PublicLayout>} />
                         <Route path="/academics/program-outcomes" element={<PublicLayout><Academics /></PublicLayout>} />
                         <Route path="/academics/bos-meetings" element={<PublicLayout><Academics /></PublicLayout>} />
                         <Route path="/research" element={<PublicLayout><Research /></PublicLayout>} />
