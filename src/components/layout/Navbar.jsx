@@ -14,6 +14,8 @@ const navItems = [
         path: '/academics',
         children: [
             { label: 'Syllabus', path: '/academics/syllabus' },
+            { label: 'Academic Calendar', path: '/academics/academic-calendar' },
+            { label: 'Holiday List', path: '/academics/holiday-list' },
             { label: 'Program Outcomes', path: '/academics/program-outcomes' },
             { label: 'BoS Meetings', path: '/academics/bos-meetings' },
         ]
