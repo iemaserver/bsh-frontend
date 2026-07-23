@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, FileText, Target, Users, ExternalLink, Download } from 'lucide-react';
+import { BookOpen, FileText, Target, Users, ExternalLink, Download, Calendar, CalendarDays } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
+import { SYLLABUS_FALLBACK } from '@/data/syllabusData';
+
+// Hardcoded links for documents that are just a single PDF each
+const ACADEMIC_CALENDAR_URL = 'https://media.iem.edu.in/uploads/2026/07/Academic-Calendar-2026-2027-1.pdf';
+const HOLIDAY_LIST_URL = 'https://media.iem.edu.in/uploads/2026/01/Holiday-List-2026_IEM-UEM-Group.pdf';
 
 const tabs = [
     { id: 'syllabus', label: 'Syllabus', path: '/academics/syllabus', icon: BookOpen },
+    { id: 'academic-calendar', label: 'Academic Calendar', path: '/academics/academic-calendar', icon: Calendar },
+    { id: 'holiday-list', label: 'Holiday List', path: '/academics/holiday-list', icon: CalendarDays },
     { id: 'program-outcomes', label: 'Program Outcomes', path: '/academics/program-outcomes', icon: Target },
     { id: 'bos-meetings', label: 'BoS Meetings', path: '/academics/bos-meetings', icon: Users },
 ];
@@ -35,7 +42,11 @@ export default function Academics() {
     const { syllabi: contextSyllabi, programOutcomes: contextProgramOutcomes, bosMeetings: contextBosMeetings } = useData();
 
     useEffect(() => {
-        if (location.pathname.includes('program-outcomes')) {
+        if (location.pathname.includes('academic-calendar')) {
+            setActiveTab('academic-calendar');
+        } else if (location.pathname.includes('holiday-list')) {
+            setActiveTab('holiday-list');
+        } else if (location.pathname.includes('program-outcomes')) {
             setActiveTab('program-outcomes');
         } else if (location.pathname.includes('bos-meetings')) {
             setActiveTab('bos-meetings');
@@ -45,7 +56,7 @@ export default function Academics() {
     }, [location.pathname]);
 
     useEffect(() => {
-        if (contextSyllabi) setSyllabi(contextSyllabi);
+        setSyllabi((contextSyllabi && contextSyllabi.length > 0) ? contextSyllabi : SYLLABUS_FALLBACK);
         if (contextProgramOutcomes) setProgramOutcomes(contextProgramOutcomes);
         if (contextBosMeetings) setBosMeetings(contextBosMeetings);
     }, [contextSyllabi, contextProgramOutcomes, contextBosMeetings]);
@@ -158,6 +169,66 @@ export default function Academics() {
                                     No syllabus documents available.
                                 </motion.p>
                             )}
+                        </motion.div>
+                    )}
+
+                    {activeTab === 'academic-calendar' && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                        >
+                            <h2 className="font-heading text-2xl font-bold mb-4">Academic Calendar</h2>
+                            <p className="text-muted-foreground mb-8 max-w-3xl">
+                                The academic calendar lists semester start/end dates, examination schedules, and important academic deadlines.
+                            </p>
+                            <Card className="max-w-md hover:shadow-lg transition-shadow">
+                                <CardContent className="p-6 flex items-center justify-between gap-4">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
+                                            <Calendar className="w-6 h-6 text-red-600" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-medium">Academic Calendar 2026-2027</h4>
+                                            <p className="text-xs text-muted-foreground">PDF Document</p>
+                                        </div>
+                                    </div>
+                                    <Button variant="outline" size="icon" asChild>
+                                        <a href={ACADEMIC_CALENDAR_URL} target="_blank" rel="noopener noreferrer">
+                                            <ExternalLink className="w-4 h-4" />
+                                        </a>
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
+                    )}
+
+                    {activeTab === 'holiday-list' && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                        >
+                            <h2 className="font-heading text-2xl font-bold mb-4">Holiday List</h2>
+                            <p className="text-muted-foreground mb-8 max-w-3xl">
+                                List of official holidays observed by the institute during the academic year.
+                            </p>
+                            <Card className="max-w-md hover:shadow-lg transition-shadow">
+                                <CardContent className="p-6 flex items-center justify-between gap-4">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
+                                            <CalendarDays className="w-6 h-6 text-red-600" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-medium">Holiday List 2026</h4>
+                                            <p className="text-xs text-muted-foreground">PDF Document</p>
+                                        </div>
+                                    </div>
+                                    <Button variant="outline" size="icon" asChild>
+                                        <a href={HOLIDAY_LIST_URL} target="_blank" rel="noopener noreferrer">
+                                            <ExternalLink className="w-4 h-4" />
+                                        </a>
+                                    </Button>
+                                </CardContent>
+                            </Card>
                         </motion.div>
                     )}
 
