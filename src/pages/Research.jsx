@@ -29,6 +29,7 @@ const itemVariants = {
 export default function Research() {
     const location = useLocation();
     const [activeTab, setActiveTab] = useState('publications');
+    const [pubSubTab, setPubSubTab] = useState('journal');
     const [publications, setPublications] = useState([]);
     const [fundedProjects, setFundedProjects] = useState([]);
     const [patents, setPatents] = useState([]);
@@ -123,101 +124,113 @@ export default function Research() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                         >
-                            <h2 className="font-heading text-2xl font-bold mb-8">Publications</h2>
+                            <h2 className="font-heading text-2xl font-bold mb-6">Publications</h2>
 
-                            {['journal', 'conference', 'book'].map((type) => (
-                                pubsByType[type]?.length > 0 && (
-                                    <motion.div 
-                                        key={type} 
-                                        className="mb-10"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                    >
-                                        <h3 className="font-heading text-lg font-semibold mb-4 text-primary capitalize flex items-center gap-2">
-                                            <FileText className="w-5 h-5" />
-                                            {type === 'journal' ? 'Journal Publications' :
-                                                type === 'conference' ? 'Conference Publications' :
-                                                    'Book/Book Chapters'}
-                                        </h3>
-                                        <motion.div 
-                                            className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                                            variants={containerVariants}
-                                            initial="hidden"
-                                            animate="visible"
-                                        >
-                                            {pubsByType[type].map((pub) => (
-                                                <motion.div key={pub.id} variants={itemVariants}>
-                                                    <Card className="hover:shadow-lg transition-shadow">
-                                                        <CardContent className="p-4 flex items-center justify-between">
-                                                            <div>
-                                                                <h4 className="font-medium text-sm">{pub.title}</h4>
-                                                                <p className="text-xs text-muted-foreground mt-1">Year: {pub.year}</p>
-                                                            </div>
-                                                            {pub.documentUrl && (
-                                                                <Button variant="ghost" size="icon" asChild>
-                                                                    <a href={pub.documentUrl} target="_blank" rel="noopener noreferrer">
-                                                                        <ExternalLink className="w-4 h-4" />
-                                                                    </a>
-                                                                </Button>
-                                                            )}
-                                                        </CardContent>
-                                                    </Card>
-                                                </motion.div>
-                                            ))}
-                                        </motion.div>
-                                    </motion.div>
-                                )
-                            ))}
-
-                            {patents.length > 0 && (
-                                <motion.div 
-                                    className="mb-10"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
+                            <div className="flex flex-wrap gap-3 mb-8">
+                                <Button
+                                    variant={pubSubTab === 'journal' ? 'default' : 'outline'}
+                                    onClick={() => setPubSubTab('journal')}
+                                    className="gap-2"
                                 >
-                                    <h3 className="font-heading text-lg font-semibold mb-4 text-primary flex items-center gap-2">
-                                        <Award className="w-5 h-5" />
-                                        Patents
-                                    </h3>
-                                    <motion.div 
-                                        className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                                        variants={containerVariants}
-                                        initial="hidden"
-                                        animate="visible"
-                                    >
-                                        {patents.map((patent) => (
-                                            <motion.div key={patent.id} variants={itemVariants}>
-                                                <Card className="hover:shadow-lg transition-shadow">
-                                                    <CardContent className="p-4 flex items-center justify-between">
-                                                        <div>
-                                                            <h4 className="font-medium text-sm">{patent.title}</h4>
-                                                            {patent.patentNumber && (
-                                                                <p className="text-xs text-muted-foreground mt-1">Patent #{patent.patentNumber}</p>
-                                                            )}
-                                                        </div>
-                                                        {patent.documentUrl && (
-                                                            <Button variant="ghost" size="icon" asChild>
-                                                                <a href={patent.documentUrl} target="_blank" rel="noopener noreferrer">
-                                                                    <ExternalLink className="w-4 h-4" />
-                                                                </a>
-                                                            </Button>
-                                                        )}
-                                                    </CardContent>
-                                                </Card>
-                                            </motion.div>
-                                        ))}
-                                    </motion.div>
+                                    <FileText className="w-4 h-4" />
+                                    Journal Publication ({(pubsByType['journal'] || []).length})
+                                </Button>
+                                <Button
+                                    variant={pubSubTab === 'conference' ? 'default' : 'outline'}
+                                    onClick={() => setPubSubTab('conference')}
+                                    className="gap-2"
+                                >
+                                    <FileText className="w-4 h-4" />
+                                    Conference Publication ({(pubsByType['conference'] || []).length})
+                                </Button>
+                                <Button
+                                    variant={pubSubTab === 'book' ? 'default' : 'outline'}
+                                    onClick={() => setPubSubTab('book')}
+                                    className="gap-2"
+                                >
+                                    <FileText className="w-4 h-4" />
+                                    Books/Book Chapters Publication ({(pubsByType['book'] || []).length})
+                                </Button>
+                                <Button
+                                    variant={pubSubTab === 'patent' ? 'default' : 'outline'}
+                                    onClick={() => setPubSubTab('patent')}
+                                    className="gap-2"
+                                >
+                                    <Award className="w-4 h-4" />
+                                    Patent Publication ({patents.length})
+                                </Button>
+                            </div>
+
+                            {pubSubTab !== 'patent' && (
+                                <motion.div
+                                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                                    variants={containerVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    key={pubSubTab}
+                                >
+                                    {(pubsByType[pubSubTab] || []).map((pub) => (
+                                        <motion.div key={pub.id} variants={itemVariants}>
+                                            <Card className="hover:shadow-lg transition-shadow">
+                                                <CardContent className="p-4 flex items-center justify-between">
+                                                    <div>
+                                                        <h4 className="font-medium text-sm">{pub.title}</h4>
+                                                        <p className="text-xs text-muted-foreground mt-1">Year: {pub.year}</p>
+                                                    </div>
+                                                    {pub.documentUrl && (
+                                                        <Button variant="ghost" size="icon" asChild>
+                                                            <a href={pub.documentUrl} target="_blank" rel="noopener noreferrer">
+                                                                <ExternalLink className="w-4 h-4" />
+                                                            </a>
+                                                        </Button>
+                                                    )}
+                                                </CardContent>
+                                            </Card>
+                                        </motion.div>
+                                    ))}
+                                    {(pubsByType[pubSubTab] || []).length === 0 && (
+                                        <p className="text-muted-foreground col-span-2 text-center py-12">
+                                            No entries yet in this category.
+                                        </p>
+                                    )}
                                 </motion.div>
                             )}
 
-                            {publications.length === 0 && patents.length === 0 && (
-                                <motion.p 
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    className="text-muted-foreground text-center py-12"
+                            {pubSubTab === 'patent' && (
+                                <motion.div
+                                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                                    variants={containerVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    key="patent"
                                 >
-                                    No publications available.
-                                </motion.p>
+                                    {patents.map((patent) => (
+                                        <motion.div key={patent.id} variants={itemVariants}>
+                                            <Card className="hover:shadow-lg transition-shadow">
+                                                <CardContent className="p-4 flex items-center justify-between">
+                                                    <div>
+                                                        <h4 className="font-medium text-sm">{patent.title}</h4>
+                                                        {patent.patentNumber && (
+                                                            <p className="text-xs text-muted-foreground mt-1">Patent #{patent.patentNumber}</p>
+                                                        )}
+                                                    </div>
+                                                    {patent.documentUrl && (
+                                                        <Button variant="ghost" size="icon" asChild>
+                                                            <a href={patent.documentUrl} target="_blank" rel="noopener noreferrer">
+                                                                <ExternalLink className="w-4 h-4" />
+                                                            </a>
+                                                        </Button>
+                                                    )}
+                                                </CardContent>
+                                            </Card>
+                                        </motion.div>
+                                    ))}
+                                    {patents.length === 0 && (
+                                        <p className="text-muted-foreground col-span-2 text-center py-12">
+                                            No patents listed yet.
+                                        </p>
+                                    )}
+                                </motion.div>
                             )}
                         </motion.div>
                     )}
@@ -451,3 +464,4 @@ export default function Research() {
         </div>
     );
 }
+
