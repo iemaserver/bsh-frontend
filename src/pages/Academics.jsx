@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
 import { SYLLABUS_FALLBACK } from '@/data/syllabusData';
+import { PROGRAM_OUTCOMES_FALLBACK } from '@/data/programOutcomesData';
 
 // Hardcoded links for documents that are just a single PDF each
 const ACADEMIC_CALENDAR_URL = 'https://media.iem.edu.in/uploads/2026/07/Academic-Calendar-2026-2027-1.pdf';
@@ -57,7 +58,7 @@ export default function Academics() {
 
     useEffect(() => {
         setSyllabi((contextSyllabi && contextSyllabi.length > 0) ? contextSyllabi : SYLLABUS_FALLBACK);
-        if (contextProgramOutcomes) setProgramOutcomes(contextProgramOutcomes);
+        setProgramOutcomes((contextProgramOutcomes && contextProgramOutcomes.length > 0) ? contextProgramOutcomes : PROGRAM_OUTCOMES_FALLBACK);
         if (contextBosMeetings) setBosMeetings(contextBosMeetings);
     }, [contextSyllabi, contextProgramOutcomes, contextBosMeetings]);
 
@@ -239,7 +240,7 @@ export default function Academics() {
                         >
                             <h2 className="font-heading text-2xl font-bold mb-4">Program Outcomes (POs)</h2>
                             <p className="text-muted-foreground mb-8 max-w-3xl">
-                                Our program outcomes define what students should know and be able to do upon graduation. These outcomes guide our curriculum and assessment.
+                                The Program Outcomes (POs) for Engineering Graduates are generally based on the NBA (National Board of Accreditation), India graduate attributes aligned with the Washington Accord. These outcomes describe the knowledge, skills, and attributes that engineering graduates are expected to attain by the time they complete their degree.
                             </p>
 
                             <motion.div 
