@@ -501,3 +501,22 @@
 .focus-ring-professional {
   @apply focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2;
 }
+
+/* ===== HOME PAGE GALLERY AUTO-SCROLL ===== */
+.gallery-scroll-track {
+  width: max-content;
+  animation: gallery-scroll 40s linear infinite;
+}
+
+.gallery-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes gallery-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
