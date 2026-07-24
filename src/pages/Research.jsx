@@ -5,6 +5,7 @@ import { FileText, Microscope, GraduationCap, ExternalLink, Award, Users2 } from
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
+import { JOURNAL_PUBLICATIONS_FALLBACK } from '@/data/journalPublicationsData';
 
 const tabs = [
     { id: 'publications', label: 'Publications', path: '/research/publications', icon: FileText },
@@ -61,7 +62,7 @@ export default function Research() {
     }, [location.pathname]);
 
     useEffect(() => {
-        if (contextPublications) setPublications(contextPublications);
+        setPublications((contextPublications && contextPublications.length > 0) ? contextPublications : JOURNAL_PUBLICATIONS_FALLBACK);
         if (contextFundedProjects) setFundedProjects(contextFundedProjects);
         if (contextPatents) setPatents(contextPatents);
         if (contextSupervisors) setSupervisors(contextSupervisors);
@@ -169,16 +170,27 @@ export default function Research() {
                                     animate="visible"
                                     key={pubSubTab}
                                 >
-                                    {(pubsByType[pubSubTab] || []).map((pub) => (
+                                    {(pubsByType[pubSubTab] || []).slice().sort((a, b) => (parseInt(b.year) || 0) - (parseInt(a.year) || 0)).map((pub) => (
                                         <motion.div key={pub.id} variants={itemVariants}>
-                                            <Card className="hover:shadow-lg transition-shadow">
-                                                <CardContent className="p-4 flex items-center justify-between">
-                                                    <div>
-                                                        <h4 className="font-medium text-sm">{pub.title}</h4>
-                                                        <p className="text-xs text-muted-foreground mt-1">Year: {pub.year}</p>
+                                            <Card className="hover:shadow-lg transition-shadow h-full">
+                                                <CardContent className="p-4 flex items-start justify-between gap-3">
+                                                    <div className="min-w-0">
+                                                        <h4 className="font-medium text-sm leading-snug">{pub.title}</h4>
+                                                        {pub.journal && (
+                                                            <p className="text-xs text-muted-foreground mt-1 italic">{pub.journal}</p>
+                                                        )}
+                                                        {pub.author && (
+                                                            <p className="text-xs text-muted-foreground mt-1">{pub.author}</p>
+                                                        )}
+                                                        <div className="flex flex-wrap items-center gap-2 mt-2">
+                                                            <span className="text-xs text-muted-foreground">Year: {pub.year}</span>
+                                                            {pub.indexing && (
+                                                                <span className="badge-teal text-[10px] px-2 py-0.5 rounded-full">{pub.indexing}</span>
+                                                            )}
+                                                        </div>
                                                     </div>
                                                     {pub.documentUrl && (
-                                                        <Button variant="ghost" size="icon" asChild>
+                                                        <Button variant="ghost" size="icon" className="flex-shrink-0" asChild>
                                                             <a href={pub.documentUrl} target="_blank" rel="noopener noreferrer">
                                                                 <ExternalLink className="w-4 h-4" />
                                                             </a>
@@ -204,7 +216,7 @@ export default function Research() {
                                     animate="visible"
                                     key="patent"
                                 >
-                                    {patents.map((patent) => (
+                                    {patents.slice().sort((a, b) => (parseInt(b.year) || 0) - (parseInt(a.year) || 0)).map((patent) => (
                                         <motion.div key={patent.id} variants={itemVariants}>
                                             <Card className="hover:shadow-lg transition-shadow">
                                                 <CardContent className="p-4 flex items-center justify-between">
@@ -464,4 +476,3 @@ export default function Research() {
         </div>
     );
 }
-
