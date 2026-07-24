@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useData } from '@/hooks/useData';
 import hodImage from '@/assets/hod-prabir-kumar-das.jpg';
+import { GALLERY_FALLBACK } from '@/data/galleryData';
 
 const HOD_NAME = `Prof. Prabir Kumar Das`;
 
@@ -49,8 +50,11 @@ export default function Home() {
         faculty, 
         events, 
         notices, 
-        facilities
+        facilities,
+        gallery
     } = useData();
+
+    const galleryImages = (gallery && gallery.length > 0) ? gallery : GALLERY_FALLBACK;
 
     const stats = [
         { icon: Users, label: 'Faculty Members', value: '55', suffix: '+' },
@@ -572,6 +576,64 @@ export default function Home() {
                         <Button size="lg" className="bg-red-600 hover:bg-red-700 group" asChild>
                             <Link to="/faculty">
                                 View All Faculty <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </Button>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* PHOTO GALLERY - AUTO-SCROLLING STRIP */}
+            <section className="py-24 bg-slate-50 overflow-hidden">
+                <div className="container mx-auto px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <span className="inline-block px-4 py-1.5 bg-amber-100 text-red-700 rounded-full text-sm font-semibold mb-4">
+                            Moments
+                        </span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+                            Photo Gallery
+                        </h2>
+                        <p className="text-slate-600 max-w-2xl mx-auto">
+                            Glimpses from our events, celebrations, and campus life
+                        </p>
+                        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mt-6" />
+                    </motion.div>
+                </div>
+
+                {galleryImages.length > 0 && (
+                    <div className="relative">
+                        <div className="flex gap-4 gallery-scroll-track">
+                            {[...galleryImages, ...galleryImages].map((image, index) => (
+                                <Link
+                                    to="/gallery"
+                                    key={`${image.id}-${index}`}
+                                    className="flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
+                                >
+                                    <img
+                                        src={image.imageUrl}
+                                        alt={image.title || 'Gallery image'}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                <div className="container mx-auto px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mt-12"
+                    >
+                        <Button size="lg" className="bg-red-600 hover:bg-red-700 group" asChild>
+                            <Link to="/gallery">
+                                View Full Gallery <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>
                     </motion.div>
