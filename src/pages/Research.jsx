@@ -6,6 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
 import { JOURNAL_PUBLICATIONS_FALLBACK } from '@/data/journalPublicationsData';
+import { CONFERENCE_PUBLICATIONS_FALLBACK } from '@/data/conferencePublicationsData';
+
+const PUBLICATIONS_FALLBACK = [...JOURNAL_PUBLICATIONS_FALLBACK, ...CONFERENCE_PUBLICATIONS_FALLBACK];
 
 const tabs = [
     { id: 'publications', label: 'Publications', path: '/research/publications', icon: FileText },
@@ -62,7 +65,7 @@ export default function Research() {
     }, [location.pathname]);
 
     useEffect(() => {
-        setPublications((contextPublications && contextPublications.length > 0) ? contextPublications : JOURNAL_PUBLICATIONS_FALLBACK);
+        setPublications((contextPublications && contextPublications.length > 0) ? contextPublications : PUBLICATIONS_FALLBACK);
         if (contextFundedProjects) setFundedProjects(contextFundedProjects);
         if (contextPatents) setPatents(contextPatents);
         if (contextSupervisors) setSupervisors(contextSupervisors);
