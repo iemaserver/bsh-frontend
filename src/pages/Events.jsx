@@ -4,8 +4,9 @@ import { Calendar, Filter, Sparkles } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
+import { DISTINGUISHED_LECTURES_FALLBACK } from '@/data/distinguishedLecturesData';
 
-const categories = ['All', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest'];
+const categories = ['All', 'Distinguished Lecture', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest'];
 
 export default function Events() {
     const { events: eventsData } = useData();
@@ -13,21 +14,20 @@ export default function Events() {
     const [filteredEvents, setFilteredEvents] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
 
-    // Set events data from context when available
+    // Set events data from context when available; fall back to the
+    // hardcoded Distinguished Lecture list if the database has no events yet
     useEffect(() => {
-        if (eventsData) {
-            setEvents(eventsData);
-            setFilteredEvents(eventsData);
-        }
+        const list = (eventsData && eventsData.length > 0) ? eventsData : DISTINGUISHED_LECTURES_FALLBACK;
+        setEvents(list);
+        setFilteredEvents(list);
     }, [eventsData]);
 
     // Filter events based on category
     useEffect(() => {
-        if (selectedCategory === 'All') {
-            setFilteredEvents(events);
-        } else {
-            setFilteredEvents(events.filter((e) => e.category === selectedCategory));
-        }
+        const base = selectedCategory === 'All' ? events : events.filter((e) => e.category === selectedCategory);
+        // Newest first
+        const sorted = base.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+        setFilteredEvents(sorted);
     }, [selectedCategory, events]);
 
     return (
@@ -108,11 +108,17 @@ export default function Events() {
                             >
                                 <Card className="overflow-hidden h-full group gradient-border hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 bg-card/50 backdrop-blur-sm">
                                     <div className="h-56 bg-muted overflow-hidden relative">
-                                        <img
-                                            src={event.imageUrl}
-                                            alt={event.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        />
+                                        {event.imageUrl ? (
+                                            <img
+                                                src={event.imageUrl}
+                                                alt={event.title}
+                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center hero-gradient-violet">
+                                                <Calendar className="w-12 h-12 text-white/70" />
+                                            </div>
+                                        )}
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                                         <span className="absolute top-4 left-4 px-3 py-1.5 text-xs font-bold bg-accent text-accent-foreground rounded-full shadow-lg">
                                             {event.category}
@@ -136,6 +142,16 @@ export default function Events() {
                                                     year: 'numeric',
                                                 })}
                                             </div>
+                                        )}
+                                        {event.linkUrl && (
+                                            <a
+                                                href={event.linkUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-xs text-primary hover:underline mt-3 inline-block"
+                                            >
+                                                View Details →
+                                            </a>
                                         )}
                                     </CardContent>
                                 </Card>
