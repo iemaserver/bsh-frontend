@@ -4,6 +4,7 @@ import { Image, Calendar, X, ChevronLeft, ChevronRight, Grid, LayoutGrid } from 
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
+import { GALLERY_FALLBACK } from '@/data/galleryData';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -26,7 +27,7 @@ export default function Gallery() {
     const { gallery: contextGallery } = useData();
 
     useEffect(() => {
-        if (contextGallery) setImages(contextGallery);
+        setImages((contextGallery && contextGallery.length > 0) ? contextGallery : GALLERY_FALLBACK);
     }, [contextGallery]);
 
     const openLightbox = (image, index) => {
