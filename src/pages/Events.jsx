@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Filter, Sparkles } from 'lucide-react';
+import { Calendar, Filter, Sparkles, CalendarClock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
@@ -13,6 +13,7 @@ export default function Events() {
     const [events, setEvents] = useState([]);
     const [filteredEvents, setFilteredEvents] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
+    const [timeFilter, setTimeFilter] = useState('all'); // 'all' | 'upcoming'
 
     // Set events data from context when available; fall back to the
     // hardcoded Distinguished Lecture list if the database has no events yet
@@ -22,13 +23,23 @@ export default function Events() {
         setFilteredEvents(list);
     }, [eventsData]);
 
-    // Filter events based on category
+    // Filter events based on category and upcoming/all toggle
     useEffect(() => {
-        const base = selectedCategory === 'All' ? events : events.filter((e) => e.category === selectedCategory);
-        // Newest first
-        const sorted = base.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
-        setFilteredEvents(sorted);
-    }, [selectedCategory, events]);
+        let base = selectedCategory === 'All' ? events : events.filter((e) => e.category === selectedCategory);
+
+        if (timeFilter === 'upcoming') {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            base = base.filter((e) => e.date && new Date(e.date) >= today);
+            // Soonest first for upcoming events
+            base = base.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+        } else {
+            // Newest first for all/past events
+            base = base.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+        }
+
+        setFilteredEvents(base);
+    }, [selectedCategory, timeFilter, events]);
 
     return (
         <motion.div 
@@ -62,6 +73,30 @@ export default function Events() {
                             Explore our vibrant academic events, olympiads, workshops, and celebrations
                         </p>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* Time Tabs */}
+            <section className="py-6 border-b border-border/50">
+                <div className="container mx-auto px-6">
+                    <div className="flex items-center gap-3">
+                        <Button
+                            variant={timeFilter === 'all' ? 'default' : 'outline'}
+                            onClick={() => setTimeFilter('all')}
+                            className={`gap-2 ${timeFilter === 'all' ? 'bg-gradient-to-r from-primary to-primary/90 shadow-lg shadow-primary/20' : ''}`}
+                        >
+                            <Calendar className="w-4 h-4" />
+                            All Events
+                        </Button>
+                        <Button
+                            variant={timeFilter === 'upcoming' ? 'default' : 'outline'}
+                            onClick={() => setTimeFilter('upcoming')}
+                            className={`gap-2 ${timeFilter === 'upcoming' ? 'bg-gradient-to-r from-primary to-primary/90 shadow-lg shadow-primary/20' : ''}`}
+                        >
+                            <CalendarClock className="w-4 h-4" />
+                            Upcoming Events
+                        </Button>
+                    </div>
                 </div>
             </section>
 
@@ -166,7 +201,11 @@ export default function Events() {
                             className="text-center py-16"
                         >
                             <Sparkles className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
-                            <p className="text-muted-foreground text-lg">No events found in this category.</p>
+                            <p className="text-muted-foreground text-lg">
+                                {timeFilter === 'upcoming'
+                                    ? 'No upcoming events scheduled right now — check back soon!'
+                                    : 'No events found in this category.'}
+                            </p>
                         </motion.div>
                     )}
                 </div>
