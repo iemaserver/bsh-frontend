@@ -5,6 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
 import { DISTINGUISHED_LECTURES_FALLBACK } from '@/data/distinguishedLecturesData';
+import { SPECIAL_EVENTS_FALLBACK } from '@/data/specialEventsData';
+
+const EVENTS_FALLBACK = [...SPECIAL_EVENTS_FALLBACK, ...DISTINGUISHED_LECTURES_FALLBACK];
 
 const categories = ['All', 'Distinguished Lecture', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest'];
 
@@ -18,7 +21,7 @@ export default function Events() {
     // Set events data from context when available; fall back to the
     // hardcoded Distinguished Lecture list if the database has no events yet
     useEffect(() => {
-        const list = (eventsData && eventsData.length > 0) ? eventsData : DISTINGUISHED_LECTURES_FALLBACK;
+        const list = (eventsData && eventsData.length > 0) ? eventsData : EVENTS_FALLBACK;
         setEvents(list);
         setFilteredEvents(list);
     }, [eventsData]);
