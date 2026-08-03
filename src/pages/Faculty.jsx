@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Mail } from 'lucide-react';
+import { Search, Mail, GraduationCap, Globe } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
@@ -163,14 +163,32 @@ export default function Faculty() {
                                             </div>
                                         )}
 
-                                        {member.email && (
-                                            <Button variant="outline" size="sm" className="w-full group/btn" asChild>
-                                                <a href={`mailto:${member.email}`}>
-                                                    <Mail className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                                                    Contact
-                                                </a>
-                                            </Button>
-                                        )}
+                                        <div className="flex gap-2">
+                                            {member.email && (
+                                                <Button variant="outline" size="sm" className="flex-1 group/btn" asChild>
+                                                    <a href={`mailto:${member.email}`}>
+                                                        <Mail className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                                                        Contact
+                                                    </a>
+                                                </Button>
+                                            )}
+                                            {member.googleScholar && (
+                                                <Button variant="outline" size="sm" className="flex-1 group/btn" asChild>
+                                                    <a href={member.googleScholar} target="_blank" rel="noopener noreferrer">
+                                                        <GraduationCap className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                                                        Scholar
+                                                    </a>
+                                                </Button>
+                                            )}
+                                            {member.researchWebsite && (
+                                                <Button variant="outline" size="sm" className="flex-1 group/btn" asChild>
+                                                    <a href={member.researchWebsite} target="_blank" rel="noopener noreferrer">
+                                                        <Globe className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                                                        Website
+                                                    </a>
+                                                </Button>
+                                            )}
+                                        </div>
                                     </CardContent>
                                 </Card>
                             </motion.div>
