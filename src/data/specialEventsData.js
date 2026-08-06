@@ -23,4 +23,30 @@ Scan the QR code on the flyer to register and submit your idea. For any queries 
     imageUrl: '/futurex-design-challenge-2026.jpeg',
     linkUrl: '/futurex-design-challenge-2026.jpeg',
   },
+  {
+    id: 'japanese-class-2026',
+    category: 'Class',
+    title: 'Japanese Class — Online',
+    description: `Learn Japanese. Explore Opportunities. Build Your Global Future.
+
+Commencing from 6th August 2026.
+
+For: B.Tech 1st Year Students
+Mode: Online (Live Sessions)
+Language: Japanese (Beginner Level)
+More details regarding schedule will be shared soon.
+
+Why Learn Japanese?
+- Enhance communication skills for global opportunities
+- Open doors to career and higher education in Japan
+- Experience a rich culture and unique way of thinking
+- Build confidence and stand out in a global world
+
+Course Instructor: Dr. Tetsuya Takeno, Konan University, Japan
+
+Embrace a new language. Empower your future! All B.Tech 1st Year Students are encouraged to join. Stay tuned for updates!`,
+    date: '2026-08-06',
+    imageUrl: '/japanese-class-2026.jpeg',
+    linkUrl: '/japanese-class-2026.jpeg',
+  },
 ];
