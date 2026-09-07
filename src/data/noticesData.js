@@ -41,6 +41,7 @@ Applications must be submitted on or before 5:00 PM, 25 September 2026. Shortlis
 PI: Dr. Saikat Chakraborty | Co-PI: Dr. Ranabir Banik | Co-PI: Dr. Arnab Basu`,
     date: '2026-09-03',
     documentUrl: '/crs-project-fellow-recruitment-2026.jpeg',
+    applyUrl: 'https://forms.gle/sz894qRfb6NTGmKs7',
     isActive: true,
   },
 ];
