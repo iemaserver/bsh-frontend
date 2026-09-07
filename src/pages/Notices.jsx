@@ -4,17 +4,18 @@ import { Bell, Calendar, FileText, ExternalLink, AlertCircle } from 'lucide-reac
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
+import { NOTICES_FALLBACK } from '@/data/noticesData';
 
 export default function Notices() {
     const { notices: noticesData } = useData();
     const [notices, setNotices] = useState([]);
     const [showAll, setShowAll] = useState(false);
 
-    // Set notices data from context when available
+    // Set notices data from context when available; fall back to the
+    // hardcoded notice list if the database has none yet
     useEffect(() => {
-        if (noticesData) {
-            setNotices(noticesData);
-        }
+        const list = (noticesData && noticesData.length > 0) ? noticesData : NOTICES_FALLBACK;
+        setNotices(list.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0)));
     }, [noticesData]);
 
     const formatDate = (dateString) => {
@@ -113,9 +114,9 @@ export default function Notices() {
                                                         <h3 className="font-heading font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors">
                                                             {notice.title}
                                                         </h3>
-                                                        {notice.description && (
-                                                            <p className="text-sm text-muted-foreground">
-                                                                {notice.description}
+                                                        {(notice.description || notice.content) && (
+                                                            <p className="text-sm text-muted-foreground whitespace-pre-line">
+                                                                {notice.description || notice.content}
                                                             </p>
                                                         )}
                                                     </div>
