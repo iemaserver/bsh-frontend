@@ -120,20 +120,25 @@ export default function Notices() {
                                                             </p>
                                                         )}
                                                     </div>
-                                                    {notice.documentUrl && (
-                                                        <a
-                                                            href={notice.documentUrl}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="flex-shrink-0"
-                                                        >
-                                                            <Button variant="outline" size="sm" className="gap-2 group/btn">
-                                                                <FileText className="w-4 h-4" />
-                                                                View
-                                                                <ExternalLink className="w-3 h-3 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                                                            </Button>
-                                                        </a>
-                                                    )}
+                                                    <div className="flex flex-col gap-2 flex-shrink-0">
+                                                        {notice.applyUrl && (
+                                                            <a href={notice.applyUrl} target="_blank" rel="noopener noreferrer">
+                                                                <Button size="sm" className="gap-2 group/btn w-full bg-red-600 hover:bg-red-700">
+                                                                    Apply Now
+                                                                    <ExternalLink className="w-3 h-3 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                                                                </Button>
+                                                            </a>
+                                                        )}
+                                                        {notice.documentUrl && (
+                                                            <a href={notice.documentUrl} target="_blank" rel="noopener noreferrer">
+                                                                <Button variant="outline" size="sm" className="gap-2 group/btn w-full">
+                                                                    <FileText className="w-4 h-4" />
+                                                                    View
+                                                                    <ExternalLink className="w-3 h-3 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                                                                </Button>
+                                                            </a>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </CardContent>
                                         </Card>
