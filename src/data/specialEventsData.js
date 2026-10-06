@@ -49,4 +49,14 @@ Embrace a new language. Empower your future! All B.Tech 1st Year Students are en
     imageUrl: '/japanese-class-2026.jpeg',
     linkUrl: '/japanese-class-2026.jpeg',
   },
+  {
+    id: 'badminton-tournament-2026',
+    category: 'Competition',
+    title: 'Badminton Tournament',
+    description: `Intra College Badminton Competition 2026, organized by IEM-UEM Group, held on 4th October 2026 (Sunday).`,
+    date: '2026-10-04',
+    imageUrl: '/badminton-tournament-2026-1.jpeg',
+    images: ['/badminton-tournament-2026-1.jpeg', '/badminton-tournament-2026-2.jpeg'],
+    linkUrl: '',
+  },
 ];
