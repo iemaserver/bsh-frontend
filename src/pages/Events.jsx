@@ -233,7 +233,18 @@ export default function Events() {
                             onClick={(e) => e.stopPropagation()}
                         >
                             <div className="relative">
-                                {selectedEvent.imageUrl ? (
+                                {selectedEvent.images && selectedEvent.images.length > 1 ? (
+                                    <div className="grid grid-cols-2 gap-1 bg-black/5">
+                                        {selectedEvent.images.map((img, i) => (
+                                            <img
+                                                key={i}
+                                                src={img}
+                                                alt={`${selectedEvent.title} ${i + 1}`}
+                                                className="w-full h-48 object-cover"
+                                            />
+                                        ))}
+                                    </div>
+                                ) : selectedEvent.imageUrl ? (
                                     <img
                                         src={selectedEvent.imageUrl}
                                         alt={selectedEvent.title}
