@@ -59,4 +59,19 @@ Embrace a new language. Empower your future! All B.Tech 1st Year Students are en
     images: ['/badminton-tournament-2026-1.jpeg', '/badminton-tournament-2026-2.jpeg'],
     linkUrl: '',
   },
+  {
+    id: 'industry-visit-bose-institute-2026',
+    category: 'Industry Visit',
+    title: 'Industry Visit at Bose Institute, Salt Lake',
+    description: `The Department of Basic Science and Humanities, IEM Salt Lake Campus, in association with the IEM - AIP Society of Physics Students Chapter, is pleased to announce the successful completion of an Academic Visit to Bose Institute, Salt Lake Campus, on 29th September 2026.`,
+    date: '2026-09-29',
+    imageUrl: '/industry-visit-bose-institute-2026-cover.jpeg',
+    images: [
+      '/industry-visit-bose-institute-2026-cover.jpeg',
+      '/industry-visit-bose-institute-2026-1.jpeg',
+      '/industry-visit-bose-institute-2026-2.jpeg',
+      '/industry-visit-bose-institute-2026-3.jpeg',
+    ],
+    linkUrl: '',
+  },
 ];
