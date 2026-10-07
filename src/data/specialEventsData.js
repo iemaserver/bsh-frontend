@@ -74,4 +74,18 @@ Embrace a new language. Empower your future! All B.Tech 1st Year Students are en
     ],
     linkUrl: '',
   },
+  {
+    id: 'research-scholar-conclave-2026',
+    category: 'Talk',
+    title: 'Research Scholar Conclave on Science and Engineering (IEMRSC 2026)',
+    description: `The Research Scholar Conclave on Science and Engineering (IEMRSC 2026), First Edition, was held on 22 August 2026 at the Institute of Engineering & Management, Salt Lake Campus. The conclave provided a platform for researchers, academicians and young researchers to share ideas and discuss developments in science and engineering through invited lectures, contributed paper presentations, technical sessions and a workshop. More than 250 participants joined in online mode.`,
+    date: '2026-08-22',
+    imageUrl: '/research-scholar-conclave-2026-cover.jpeg',
+    images: [
+      '/research-scholar-conclave-2026-cover.jpeg',
+      '/research-scholar-conclave-2026-1.jpeg',
+      '/research-scholar-conclave-2026-2.jpeg',
+    ],
+    linkUrl: '',
+  },
 ];
