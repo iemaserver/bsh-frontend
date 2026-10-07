@@ -88,4 +88,24 @@ Embrace a new language. Empower your future! All B.Tech 1st Year Students are en
     ],
     linkUrl: '',
   },
+  {
+    id: 'mental-health-awareness-rally-2026',
+    category: 'Social',
+    title: 'Mental Health Awareness Rally 2026',
+    description: `IEM United for Wellness — Mental Health Awareness Rally 2026
+
+"Breaking the Silence, Building the Culture of Care."
+
+Institute of Engineering & Management, Kolkata and University of Engineering and Management, Kolkata, in association with Lions Club of Kolkata IEM, Lions Club of Kolkata Saltlake IEM & Rotary Club of Salt Lake Silicon Valley, present a Mental Health Awareness Rally on the occasion of World Mental Health Day.
+
+Theme: Awareness, Acceptance, Kindness, Support, Stronger Together
+Talk. Listen. Support. Include. Empower.
+
+Date: 7th October 2026 (Wednesday)
+Time: 3:00 PM – 4:00 PM
+Venue: Sector V, Salt Lake, Kolkata`,
+    date: '2026-10-07',
+    imageUrl: '/mental-health-rally-2026.jpeg',
+    linkUrl: '/mental-health-rally-2026.jpeg',
+  },
 ];
