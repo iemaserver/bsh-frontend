@@ -108,4 +108,21 @@ Venue: Sector V, Salt Lake, Kolkata`,
     imageUrl: '/mental-health-rally-2026.jpeg',
     linkUrl: '/mental-health-rally-2026.jpeg',
   },
+  {
+    id: 'voices-for-the-voiceless-2026',
+    category: 'Talk',
+    title: 'Voices for the Voiceless: Campus for Compassion',
+    description: `Celebrating International Animal Welfare Day — "Voices for the Voiceless: Campus for Compassion," organized by the Department of Basic Science and Humanities, IEM Saltlake Campus. Because every life matters...
+
+Speaker: Ms. Alokparna Sengupta, Managing Director, Humane World for Animals India; Member, State Board of Wildlife, Telangana.
+
+Date: 5th October 2026
+Time: 4:15 PM – 5:15 PM
+Mode: Online
+
+Faculty Coordinators: Dr. Sayani Das, Dr. Sangeeta Das, Dr. Saheli Sengupta, Dr. Anisha Purkait`,
+    date: '2026-10-05',
+    imageUrl: '/voices-for-the-voiceless-2026.jpeg',
+    linkUrl: '/voices-for-the-voiceless-2026.jpeg',
+  },
 ];
