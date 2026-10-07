@@ -4,6 +4,7 @@ import { BookOpen, Globe, ExternalLink, Users, Calendar, MapPin } from 'lucide-r
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
+import { CONFERENCES_FALLBACK } from '@/data/conferencesData';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -32,7 +33,7 @@ export default function Journals() {
 
     useEffect(() => {
         if (contextJournals) setJournals(contextJournals);
-        if (contextConferences) setConferences(contextConferences);
+        setConferences((contextConferences && contextConferences.length > 0) ? contextConferences : CONFERENCES_FALLBACK);
     }, [contextJournals, contextConferences]);
 
     return (
@@ -158,6 +159,11 @@ export default function Journals() {
                                                     <h3 className="font-heading font-bold text-lg mb-2">
                                                         {conference.name}
                                                     </h3>
+                                                    {conference.description && (
+                                                        <p className="text-sm text-muted-foreground mb-3 whitespace-pre-line">
+                                                            {conference.description}
+                                                        </p>
+                                                    )}
                                                     <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                                                         {conference.date && (
                                                             <span className="flex items-center gap-1">
@@ -191,6 +197,25 @@ export default function Journals() {
                                                     </a>
                                                 )}
                                             </div>
+                                            {conference.images && conference.images.length > 0 && (
+                                                <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mt-5">
+                                                    {conference.images.map((img, i) => (
+                                                        <a
+                                                            key={i}
+                                                            href={img}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="aspect-square rounded-lg overflow-hidden group block"
+                                                        >
+                                                            <img
+                                                                src={img}
+                                                                alt={`${conference.shortName} photo ${i + 1}`}
+                                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                                            />
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </CardContent>
                                     </Card>
                                 </motion.div>
