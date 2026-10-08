@@ -91,22 +91,25 @@ Embrace a new language. Empower your future! All B.Tech 1st Year Students are en
   {
     id: 'mental-health-awareness-rally-2026',
     category: 'Social',
-    title: 'Mental Health Awareness Rally 2026',
-    description: `IEM United for Wellness — Mental Health Awareness Rally 2026
+    title: 'Mental Health Awareness Rally 2026 — IEM United for Wellness',
+    description: `On the occasion of World Mental Health Day, a Mental Health Awareness Rally, "IEM United for Wellness," was organized on 7th October 2026 at Sector V, Salt Lake. The rally witnessed the enthusiastic participation of more than 1,500 students, along with faculty members and staff members, making it a remarkable initiative towards promoting mental health awareness and well-being.
 
-"Breaking the Silence, Building the Culture of Care."
+The rally, with a cultural program, was organized by the Department of Basic Science and Humanities, IEM, Kolkata, Salt Lake (School of UEM, Kolkata), in association with the Lions Club of Kolkata IEM, Lions Club of Kolkata Saltlake IEM, and Rotary Club of Salt Lake Silicon Valley.
 
-Institute of Engineering & Management, Kolkata and University of Engineering and Management, Kolkata, in association with Lions Club of Kolkata IEM, Lions Club of Kolkata Saltlake IEM & Rotary Club of Salt Lake Silicon Valley, present a Mental Health Awareness Rally on the occasion of World Mental Health Day.
-
-Theme: Awareness, Acceptance, Kindness, Support, Stronger Together
-Talk. Listen. Support. Include. Empower.
-
-Date: 7th October 2026 (Wednesday)
-Time: 3:00 PM – 4:00 PM
-Venue: Sector V, Salt Lake, Kolkata`,
+"Breaking the Silence, Building the Culture of Care."`,
     date: '2026-10-07',
-    imageUrl: '/mental-health-rally-2026.jpeg',
-    linkUrl: '/mental-health-rally-2026.jpeg',
+    imageUrl: '/mental-health-rally-2026-photo-1.jpeg',
+    images: [
+      '/mental-health-rally-2026-photo-1.jpeg',
+      '/mental-health-rally-2026-photo-2.jpeg',
+      '/mental-health-rally-2026-photo-7.jpeg',
+      '/mental-health-rally-2026-photo-6.jpeg',
+      '/mental-health-rally-2026-photo-4.jpeg',
+      '/mental-health-rally-2026-photo-5.jpeg',
+      '/mental-health-rally-2026-photo-3.jpeg',
+      '/mental-health-rally-2026.jpeg',
+    ],
+    linkUrl: '',
   },
   {
     id: 'voices-for-the-voiceless-2026',
