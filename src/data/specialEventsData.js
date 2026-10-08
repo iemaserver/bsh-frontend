@@ -125,4 +125,25 @@ Faculty Coordinators: Dr. Sayani Das, Dr. Sangeeta Das, Dr. Saheli Sengupta, Dr.
     imageUrl: '/voices-for-the-voiceless-2026.jpeg',
     linkUrl: '/voices-for-the-voiceless-2026.jpeg',
   },
+  {
+    id: 'smart-maker-fest-2026',
+    category: 'Fest',
+    title: 'SMART MAKER FEST 2026',
+    description: `SMART MAKER FEST 2026 was held on 3rd & 4th October 2026 at IEM Management House, Kolkata. Organised by the Institute of Engineering & Management (IEM) and University of Engineering and Management, Kolkata (UEM), Salt Lake, in association with SMART Society, the two-day fest brought technology, creativity and entrepreneurship under one roof.
+
+Highlights included a maker exhibition, an eight-hour hackathon, robotics and drone workshops, a science and technology quiz, and a range of industry and culture events, with participation from students and young innovators. The fest was supported by Lions Club of Kolkata IEM, Lions Club of Kolkata Saltlake IEM and Rotary Club of Salt Lake Silicon Valley.
+
+Media coverage: Puber Kalom (4 October 2026) and Outlook Business (5 October 2026).`,
+    date: '2026-10-03',
+    imageUrl: '/smart-maker-fest-2026-1.jpeg',
+    images: [
+      '/smart-maker-fest-2026-1.jpeg',
+      '/smart-maker-fest-2026-2.jpeg',
+      '/smart-maker-fest-2026-3.jpeg',
+      '/smart-maker-fest-2026-4.jpeg',
+      '/smart-maker-fest-2026-5.jpeg',
+      '/smart-maker-fest-2026-6.jpeg',
+    ],
+    linkUrl: '',
+  },
 ];
