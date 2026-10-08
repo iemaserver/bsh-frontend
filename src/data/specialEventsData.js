@@ -146,4 +146,30 @@ Media coverage: Puber Kalom (4 October 2026) and Outlook Business (5 October 202
     ],
     linkUrl: '',
   },
+  {
+    id: 'tedx-iem-salt-lake-2026',
+    category: 'Talk',
+    title: 'TEDx IEM Salt Lake 2026 — CTRL + U: Loneliness in the Era of AI',
+    description: `TEDx IEM Salt Lake 2026 was held on 30th September 2026, with the theme "CTRL + U: Loneliness in the Era of AI."
+
+Speakers:
+1. Satish Reddy Eadala, Development Director, Electronic Arts (EA)
+2. Chaiti Ghoshal, Film & Theatre Actor
+3. Lagnajita Chakraborty, Playback Singer
+4. Bhakt Bhagwat, Spiritual Orator and one of the youngest TEDx speakers in the world
+5. Dr. Kunal Sarkar, Cardiovascular & Thoracic Surgeon
+6. Prof. Dr. Suman Chakraborty, Director, IIT Kharagpur
+7. Prof. Dr. Satyajit Chakrabarti, Vice Chancellor, UEM Kolkata`,
+    date: '2026-09-30',
+    imageUrl: '/tedx-iem-salt-lake-2026-1.jpeg',
+    images: [
+      '/tedx-iem-salt-lake-2026-1.jpeg',
+      '/tedx-iem-salt-lake-2026-2.jpeg',
+      '/tedx-iem-salt-lake-2026-3.jpeg',
+      '/tedx-iem-salt-lake-2026-4.jpeg',
+      '/tedx-iem-salt-lake-2026-5.jpeg',
+      '/tedx-iem-salt-lake-2026-6.jpeg',
+    ],
+    linkUrl: '',
+  },
 ];
