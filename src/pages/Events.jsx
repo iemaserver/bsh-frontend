@@ -236,12 +236,19 @@ export default function Events() {
                                 {selectedEvent.images && selectedEvent.images.length > 1 ? (
                                     <div className="grid grid-cols-2 gap-1 bg-black/5">
                                         {selectedEvent.images.map((img, i) => (
-                                            <img
+                                            <a
                                                 key={i}
-                                                src={img}
-                                                alt={`${selectedEvent.title} ${i + 1}`}
-                                                className="w-full h-48 object-cover"
-                                            />
+                                                href={img}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="block overflow-hidden"
+                                            >
+                                                <img
+                                                    src={img}
+                                                    alt={`${selectedEvent.title} ${i + 1}`}
+                                                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                                />
+                                            </a>
                                         ))}
                                     </div>
                                 ) : selectedEvent.imageUrl ? (
