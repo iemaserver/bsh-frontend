@@ -175,4 +175,42 @@ Speakers:
     ],
     linkUrl: '',
   },
+  {
+    id: 'painting-photography-contest-2026',
+    category: 'Competition',
+    title: 'Painting & Photography Contest — Rekhay Aloy Durga',
+    description: `Organized by the Department of Basic Science and Humanities, Institute of Engineering & Management, Kolkata.
+
+Rekhay Aloy Durga: Where Tradition Meets AI — Art, Lens & Intelligence in One Frame.
+
+Categories:
+- Live Painting (Sketch or Colour)
+- Photography (Mobile/DSLR)
+
+Sub-themes:
+1. Durga Beyond the Idol
+2. Colours of Durgotsav
+3. Kolkata in the Puja
+4. The Hands Behind Durgotsav
+5. Green Durgotsav
+
+An excellent opportunity to appear in the Departmental Magazine. Awards will be given to the winners. MAR points will be provided for participation.
+
+Event Date: 8 October 2026
+Time: 4:15 PM
+
+Faculty Coordinators: Dr. Soumyabrata Goswami, Dr. Dibyasree Choudhury, Dr. Sangeeta Das, Dr. Sayani Das, Dr. Souvik Mondal`,
+    date: '2026-10-08',
+    imageUrl: '/painting-contest-2026-1.jpeg',
+    images: [
+      '/painting-contest-2026-1.jpeg',
+      '/painting-contest-2026-2.jpeg',
+      '/painting-contest-2026-3.jpeg',
+      '/painting-contest-2026-4.jpeg',
+      '/painting-contest-2026-5.jpeg',
+      '/painting-contest-2026-6.jpeg',
+      '/painting-contest-2026-flyer.jpeg',
+    ],
+    linkUrl: '',
+  },
 ];
