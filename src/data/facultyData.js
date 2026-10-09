@@ -66,6 +66,7 @@ import p_SAYANI_DAS from '@/assets/SAYANI_DAS.jpg';
 import p_Sreya_Dutt from '@/assets/Sreya_Dutt.jpg';
 import p_Subhamoy_Banerjee from '@/assets/Subhamoy_Banerjee.jpg';
 import p_Tapas_Mal from '@/assets/Tapas_Mal.jpg';
+import p_Jhilam_Ganguly from '@/assets/Jhilam_Ganguly.jpg';
 
 export const FACULTY_FALLBACK = [
   { id: 'Abhijit_Kargupta', name: 'Abhijit Kargupta', abbreviation: 'AKG', subject: 'Chemistry', designation: '', qualification: '', experience: '', researchArea: '', researchWebsite: '', email: '', googleScholar: '', isHod: false, imageUrl: p_Abhijit_Kargupta },
@@ -133,5 +134,5 @@ export const FACULTY_FALLBACK = [
   { id: 'Sreya_Dutt', name: 'Sreya Dutt', abbreviation: 'SRD', subject: 'English', designation: '', qualification: '', experience: '', researchArea: '', researchWebsite: '', email: '', googleScholar: '', isHod: false, imageUrl: p_Sreya_Dutt },
   { id: 'Subhamoy_Banerjee', name: 'Subhamoy Banerjee', abbreviation: 'SMB', subject: 'Biology', designation: '', qualification: '', experience: '', researchArea: '', researchWebsite: '', email: '', googleScholar: '', isHod: false, imageUrl: p_Subhamoy_Banerjee },
   { id: 'Tapas_Mal', name: 'Tapas Mal', abbreviation: 'TPM', subject: 'Mathematics', designation: '', qualification: 'Ph.D. (National Institute of Technology Surat (SV NIT))', experience: 'Research: 5 years', researchArea: 'Water wave mechanics, Hydroelasticity, Integral equation', researchWebsite: '', email: '', googleScholar: 'https://scholar.google.com/citations?user=5S22hDMAAAAJ&hl=en&oi=ao', isHod: false, imageUrl: p_Tapas_Mal },
-  { id: 'Jhilam_Ganguly', name: 'Jhilam Ganguly', abbreviation: '', subject: '', designation: '', qualification: 'Ph.D, Registered (Guru Ghasidas Vishwavidyalaya, A Central University)', experience: 'Research: 3 years', researchArea: 'Graphic Narratives, Memory Studies, Cultural Studies', researchWebsite: '', email: '', googleScholar: 'https://share.google/c4HKOpQ3rptC4G1b5', isHod: false, imageUrl: '' },
+  { id: 'Jhilam_Ganguly', name: 'Jhilam Ganguly', abbreviation: 'JLG', subject: 'English', designation: '', qualification: 'Ph.D, Registered (Guru Ghasidas Vishwavidyalaya, A Central University)', experience: 'Research: 3 years', researchArea: 'Graphic Narratives, Memory Studies, Cultural Studies', researchWebsite: '', email: '', googleScholar: 'https://share.google/c4HKOpQ3rptC4G1b5', isHod: false, imageUrl: p_Jhilam_Ganguly },
 ];
