@@ -3,6 +3,39 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'drone-workshop-2026',
+    category: 'Workshop',
+    title: 'Decode the Drone: Anatomy, Electronics & Flight',
+    description: `IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented a hands-on workshop exclusively for B.Tech. first-year students: Decode the Drone: Anatomy, Electronics & Flight.
+
+Understand how individual components work together to achieve stable and controlled flight.
+
+Topics: Drone Components and Their Functions; Electronics & Flight Control; Assembly & System Integration; Principles of Stable Flight.
+
+Instructor: Pratim Chaterjee, DGCA approved Drone Instructor, Former U.A.V. Engineer and Instructor.
+
+Date & Time: 5th October 2026 (Monday), 4:30 PM to 5:30 PM
+Venue: CII Auditorium, IEM Management House
+Seats: Limited, only 100
+Certificate: Certificate for all participants (will carry MAR points)
+Mandatory requirement: Participants needed to bring their own laptop.
+
+Organizers: Dr. Chandan Adhikari, Dr. Sukhendu Sadhukhan, Dr. Somnath Roy, Dr. Ranabir Banik, Shivam Roy Chowdhury
+Student Coordinators: Soham Mondal, Aitihya Mondal, Debasish Mohanty, Sounak Chakraborty, Subham Giri
+Organizing Chair: Dr. Prabir Kumar Das`,
+    date: '2026-10-05',
+    imageUrl: '/drone-workshop-2026-1.jpeg',
+    images: [
+      '/drone-workshop-2026-1.jpeg',
+      '/drone-workshop-2026-2.jpeg',
+      '/drone-workshop-2026-3.jpeg',
+      '/drone-workshop-2026-4.jpeg',
+      '/drone-workshop-2026-5.jpeg',
+      '/drone-workshop-2026-6.jpeg',
+    ],
+    linkUrl: '/drone-workshop-2026-flyer.jpeg',
+  },
+  {
     id: 'arduino-workshop-2026',
     category: 'Workshop',
     title: 'Know Your Arduino Kit — Explore, Experiment & Create',
