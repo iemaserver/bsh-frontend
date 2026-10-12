@@ -25,6 +25,7 @@ import Faculty from '@/pages/Faculty';
 import Academics from '@/pages/Academics';
 import Research from '@/pages/Research';
 import Events from '@/pages/Events';
+import OpenPositions from '@/pages/OpenPositions';
 import PhotographyArt from '@/pages/PhotographyArt';
 import Contact from '@/pages/Contact';
 import Notices from '@/pages/Notices';
@@ -113,6 +114,7 @@ function AppContent() {
                         <Route path="/research/projects" element={<PublicLayout><Research /></PublicLayout>} />
                         <Route path="/research/phd" element={<PublicLayout><Research /></PublicLayout>} />
                         <Route path="/research/collaborations" element={<PublicLayout><Research /></PublicLayout>} />
+                        <Route path="/research/open-positions" element={<PublicLayout><OpenPositions /></PublicLayout>} />
                         <Route path="/events" element={<PublicLayout><Events /></PublicLayout>} />
                         <Route path="/events/photography-and-art" element={<PublicLayout><PhotographyArt /></PublicLayout>} />
                         <Route path="/notices" element={<PublicLayout><Notices /></PublicLayout>} />
