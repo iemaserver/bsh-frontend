@@ -6,13 +6,14 @@ import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
 import { DISTINGUISHED_LECTURES_FALLBACK } from '@/data/distinguishedLecturesData';
 import { SPECIAL_EVENTS_FALLBACK } from '@/data/specialEventsData';
+import { CONFERENCES_FALLBACK } from '@/data/conferencesData';
 
 const EVENTS_FALLBACK = [...SPECIAL_EVENTS_FALLBACK, ...DISTINGUISHED_LECTURES_FALLBACK];
 
-const categories = ['All', 'Distinguished Lecture', 'Class', 'Industry Visit', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest'];
+const categories = ['All', 'Distinguished Lecture', 'Class', 'Industry Visit', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest', 'Conference'];
 
 export default function Events() {
-    const { events: eventsData } = useData();
+    const { events: eventsData, conferences: conferencesData } = useData();
     const [events, setEvents] = useState([]);
     const [filteredEvents, setFilteredEvents] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -22,10 +23,28 @@ export default function Events() {
     // Set events data from context when available; fall back to the
     // hardcoded event list if the database has no events yet
     useEffect(() => {
-        const list = (eventsData && eventsData.length > 0) ? eventsData : EVENTS_FALLBACK;
+        const baseList = (eventsData && eventsData.length > 0) ? eventsData : EVENTS_FALLBACK;
+        // Conferences are also shown in All Events (category "Conference")
+        const confSource = (conferencesData && conferencesData.length > 0) ? conferencesData : CONFERENCES_FALLBACK;
+        const existingIds = new Set(baseList.map((e) => e.id));
+        const conferenceEvents = confSource
+            .filter((c) => !existingIds.has(c.id))
+            .map((c) => ({
+                id: c.id,
+                category: 'Conference',
+                title: c.name || c.shortName,
+                description: c.description,
+                date: c.date,
+                venue: c.venue,
+                imageUrl: (c.images && c.images[0]) || '',
+                images: c.images || [],
+            }));
+        const list = [...baseList, ...conferenceEvents].sort(
+            (a, b) => new Date(b.date || 0) - new Date(a.date || 0)
+        );
         setEvents(list);
         setFilteredEvents(list);
-    }, [eventsData]);
+    }, [eventsData, conferencesData]);
 
     // Filter events based on category and upcoming/all toggle
     useEffect(() => {
@@ -289,6 +308,24 @@ export default function Events() {
                                     <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                                         {selectedEvent.description}
                                     </p>
+                                )}
+                                {selectedEvent.venue && (
+                                    <p className="text-sm text-muted-foreground mt-4">
+                                        <span className="font-semibold">Venue:</span> {selectedEvent.venue}
+                                    </p>
+                                )}
+                                {selectedEvent.images && selectedEvent.images.length > 1 && (
+                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-6">
+                                        {selectedEvent.images.map((img, i) => (
+                                            <img
+                                                key={i}
+                                                src={img}
+                                                alt={`${selectedEvent.title} photo ${i + 1}`}
+                                                className="w-full h-40 object-cover rounded-lg"
+                                                loading="lazy"
+                                            />
+                                        ))}
+                                    </div>
                                 )}
                                 {selectedEvent.linkUrl && (
                                     <a
