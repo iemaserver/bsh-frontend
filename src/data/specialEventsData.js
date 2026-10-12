@@ -3,6 +3,20 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'photography-art-submission-portal-2026',
+    category: 'Photography and Art',
+    title: 'Photography and Art — রেখায়, আলোয় দুর্গা (Online Submission Portal)',
+    description: `Welcome to the online submission portal for “রেখায়, আলোয় দুর্গা”, a Durga Puja-themed photography and drawing competition organized by the Department of Basic Science and Humanities (BSH), Institute of Engineering & Management (IEM), Kolkata.
+
+Students are invited to express their creativity through photographs and artwork inspired by the colours, traditions, emotions, and artistic beauty of Durga Puja.
+
+Capture the moments. Create the art. Celebrate Maa Durga.`,
+    date: '2026-10-08',
+    imageUrl: '/painting-contest-2026-1.jpeg',
+    linkUrl: 'https://chalchitra-competiti-wera.bolt.host/#gallery',
+    linkLabel: 'Open Submission Portal & Gallery',
+  },
+  {
     id: 'futurex-design-challenge-2026',
     category: 'Competition',
     title: 'FutureX Design Challenge 2026',
