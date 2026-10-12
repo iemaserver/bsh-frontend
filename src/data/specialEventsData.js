@@ -3,6 +3,37 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'arduino-workshop-2026',
+    category: 'Workshop',
+    title: 'Know Your Arduino Kit — Explore, Experiment & Create',
+    description: `IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented a hands-on workshop exclusively for B.Tech. first-year students: Know Your Arduino Kit — Explore, Experiment & Create.
+
+Ideas to Innovation. Build. Learn. Experiment. Create. Small Projects, Big Possibilities.
+
+Date & Time: 23rd September 2026, 4:30 PM to 5:30 PM
+Venue: CII Auditorium, IEM Management House
+Instructor: Dr. Sukhendu Sadhukhan, Ph.D. (Physics)
+Seats: Limited, only 100
+Certificate: Certificate for all (will carry MAR points)
+Mandatory requirement: Participants needed to bring their own laptop and the Arduino Kit given by IEM.
+
+Organizers: Dr. Chandan Adhikari, Dr. Ranabir Banik, Dr. Somnath Roy
+Organizing Chair: Dr. Prabir Kumar Das
+
+Learn. Experiment. Innovate. Build a Brighter Tomorrow. From Students to Innovators.`,
+    date: '2026-09-23',
+    imageUrl: '/arduino-workshop-2026-1.jpeg',
+    images: [
+      '/arduino-workshop-2026-1.jpeg',
+      '/arduino-workshop-2026-2.jpeg',
+      '/arduino-workshop-2026-3.jpeg',
+      '/arduino-workshop-2026-4.jpeg',
+      '/arduino-workshop-2026-5.jpeg',
+      '/arduino-workshop-2026-6.jpeg',
+    ],
+    linkUrl: '/arduino-workshop-2026-flyer.jpg',
+  },
+  {
     id: 'business-plan-competition-2026',
     category: 'Competition',
     title: 'Inter Section Business Plan Competition — Green Business for a Sustainable Future',
