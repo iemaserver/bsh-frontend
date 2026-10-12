@@ -3,6 +3,40 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'laser-engraving-workshop-2026',
+    category: 'Workshop',
+    title: 'Hands-On Workshop on Digital Manufacturing through Laser Engraving',
+    description: `Learn. Design. Engrave. Create.
+
+CoE IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented a hands-on workshop on Digital Manufacturing through Laser Engraving.
+
+Date: 10th August 2026 to 14th August 2026
+Time: 4:30 PM to 5:30 PM
+Venue: IIFR Lab, IEM Management House
+Seats: Only 25 (selected based on previous skills and Class 12 marks)
+Registration: Free (register by 6th August 2026; no submission after that)
+
+Certificate for all (will carry MAR points and will make your CV strong).
+Certificate eligibility: 100% attendance in all 5 sessions and 80% marks in the hands-on exam at the end of the workshop.
+
+Instructor: Dr. Sukhendu Sadhukhan, Ph.D.; Physics
+Organizers: Dr. Chandan Adhikari, Dr. Ranabir Banik, Dr. Somnath Roy
+Organizing Chair: Dr. Prabir Kumar Das
+Student Coordinators: Debasish Mohanty, Subarna De, Soumik Nath
+
+Transform Ideas into Reality with Precision and Creativity.`,
+    date: '2026-08-10',
+    imageUrl: '/laser-engraving-workshop-2026-1.jpeg',
+    images: [
+      '/laser-engraving-workshop-2026-1.jpeg',
+      '/laser-engraving-workshop-2026-2.jpeg',
+      '/laser-engraving-workshop-2026-3.jpeg',
+      '/laser-engraving-workshop-2026-4.jpeg',
+      '/laser-engraving-workshop-2026-5.jpeg',
+    ],
+    linkUrl: '/laser-engraving-workshop-2026-flyer.jpeg',
+  },
+  {
     id: 'photography-art-submission-portal-2026',
     category: 'Photography and Art',
     title: 'Photography and Art — রেখায়, আলোয় দুর্গা (Online Submission Portal)',
