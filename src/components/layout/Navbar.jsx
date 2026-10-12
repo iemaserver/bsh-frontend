@@ -27,6 +27,7 @@ const navItems = [
             { label: 'Publications', path: '/research/publications' },
             { label: 'Funded Projects', path: '/research/projects' },
             { label: 'PhD Students', path: '/research/phd' },
+            { label: 'Open Positions', path: '/research/open-positions' },
             { label: 'Consultancy & MoU', path: '/consultancy' },
         ]
     },
