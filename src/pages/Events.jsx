@@ -10,7 +10,7 @@ import { CONFERENCES_FALLBACK } from '@/data/conferencesData';
 
 const EVENTS_FALLBACK = [...SPECIAL_EVENTS_FALLBACK, ...DISTINGUISHED_LECTURES_FALLBACK];
 
-const categories = ['All', 'Distinguished Lecture', 'Class', 'Industry Visit', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest', 'Conference'];
+const categories = ['All', 'Distinguished Lecture', 'Class', 'Industry Visit', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest', 'Conference', 'Photography and Art'];
 
 export default function Events() {
     const { events: eventsData, conferences: conferencesData } = useData();
@@ -334,7 +334,7 @@ export default function Events() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-2 text-primary hover:underline mt-6 font-medium"
                                     >
-                                        View Full Flyer <ExternalLink className="w-4 h-4" />
+                                        {selectedEvent.linkLabel || 'View Full Flyer'} <ExternalLink className="w-4 h-4" />
                                     </a>
                                 )}
                             </div>
