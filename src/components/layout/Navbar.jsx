@@ -35,6 +35,7 @@ const navItems = [
         path: '#',
         children: [
             { label: 'Events', path: '/events' },
+            { label: 'Photography and Art', path: '/events/photography-and-art' },
             { label: 'Notices', path: '/notices' },
             { label: 'Journals & Conferences', path: '/journals' },
             { label: 'Clubs & Chapters', path: '/clubs' },
@@ -67,6 +68,7 @@ export default function Navbar() {
     const isActivePath = (path) => {
         if (path === '/') return location.pathname === '/';
         if (path === '#') return false;
+        if (path === '/events') return location.pathname === '/events';
         return location.pathname === path || location.pathname.startsWith(path + '/');
     };
 
