@@ -260,12 +260,14 @@ export default function Events() {
                                                 href={img}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="block overflow-hidden"
+                                                className={`block overflow-hidden bg-black/5 ${
+                                                    selectedEvent.images.length % 2 === 1 && i === selectedEvent.images.length - 1 ? 'col-span-2' : ''
+                                                }`}
                                             >
                                                 <img
                                                     src={img}
                                                     alt={`${selectedEvent.title} ${i + 1}`}
-                                                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                                    className="w-full h-64 object-contain hover:scale-105 transition-transform duration-300"
                                                 />
                                             </a>
                                         ))}
@@ -313,19 +315,6 @@ export default function Events() {
                                     <p className="text-sm text-muted-foreground mt-4">
                                         <span className="font-semibold">Venue:</span> {selectedEvent.venue}
                                     </p>
-                                )}
-                                {selectedEvent.images && selectedEvent.images.length > 1 && (
-                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-6">
-                                        {selectedEvent.images.map((img, i) => (
-                                            <img
-                                                key={i}
-                                                src={img}
-                                                alt={`${selectedEvent.title} photo ${i + 1}`}
-                                                className="w-full h-40 object-cover rounded-lg"
-                                                loading="lazy"
-                                            />
-                                        ))}
-                                    </div>
                                 )}
                                 {selectedEvent.linkUrl && (
                                     <a
