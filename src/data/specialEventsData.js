@@ -26,15 +26,15 @@ Student Coordinators: Debasish Mohanty, Subarna De, Soumik Nath
 
 Transform Ideas into Reality with Precision and Creativity.`,
     date: '2026-08-10',
-    imageUrl: '/laser-engraving-workshop-2026-1.jpeg',
+    imageUrl: '/Laser%20Engraving%20Workshop5.jpeg',
     images: [
-      '/laser-engraving-workshop-2026-1.jpeg',
-      '/laser-engraving-workshop-2026-2.jpeg',
-      '/laser-engraving-workshop-2026-3.jpeg',
-      '/laser-engraving-workshop-2026-4.jpeg',
-      '/laser-engraving-workshop-2026-5.jpeg',
+      '/Laser%20Engraving%20Workshop5.jpeg',
+      '/Laser%20Engraving%20Workshop2.jpeg',
+      '/Laser%20Engraving%20Workshop3.jpeg',
+      '/Laser%20Engraving%20Workshop4.jpeg',
+      '/Laser%20Engraving%20Workshop1.jpeg',
     ],
-    linkUrl: '/laser-engraving-workshop-2026-flyer.jpeg',
+    linkUrl: '/Laser%20Engraving%20Workshop.jpeg',
   },
   {
     id: 'photography-art-submission-portal-2026',
