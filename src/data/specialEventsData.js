@@ -3,6 +3,35 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'when-friction-has-a-memory-2026',
+    category: 'Talk',
+    title: 'Popular Lecture: “When Friction has a Memory” — Dr. Mattia Coccolo',
+    description: `IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented a popular lecture, “When Friction has a Memory”, as part of the Foreign Lecture Series from CoE IIFR Lab, Department of Basic Science and Humanities.
+
+Speaker: Dr. Mattia Coccolo, Associate Professor of Applied Physics at Universidad Rey Juan Carlos (URJC), Madrid, Spain.
+
+About the Talk: Friction is not just a force opposing motion — it can also “remember” its past. In this engaging lecture, Dr. Mattia Coccolo explored the fascinating concept of memory effects in friction, their physical origins, and their implications in modern science and engineering. The talk was accessible to a broad audience and highlighted how this phenomenon connects fundamental physics with real-world applications.
+
+Topics: Tribology, Memory Effects, Materials Physics, Nonlinear Dynamics, Real-World Applications.
+
+Date & Time: 30th September 2026, 7:30 PM to 8:30 PM
+Mode: Online through Google Meet
+Seats: Limited, only 130
+Certificate: Certificate for all participants (will carry MAR points)
+
+Organizers: Dr. Somnath Roy, Dr. Chandan Adhikari, Dr. Ranabir Banik, Dr. Sukhendu Sadhukhan
+Organizing Chair: Dr. Prabir Kumar Das`,
+    date: '2026-09-30',
+    imageUrl: '/when-friction-has-a-memory-2026-1.jpeg',
+    images: [
+      '/when-friction-has-a-memory-2026-1.jpeg',
+      '/when-friction-has-a-memory-2026-2.jpeg',
+      '/when-friction-has-a-memory-2026-3.jpeg',
+      '/when-friction-has-a-memory-2026-4.jpeg',
+    ],
+    linkUrl: '/when-friction-has-a-memory-2026-flyer.jpeg',
+  },
+  {
     id: 'drone-workshop-2026',
     category: 'Workshop',
     title: 'Decode the Drone: Anatomy, Electronics & Flight',
