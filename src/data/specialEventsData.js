@@ -3,6 +3,40 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'business-plan-competition-2026',
+    category: 'Competition',
+    title: 'Inter Section Business Plan Competition — Green Business for a Sustainable Future',
+    description: `IIC IEM, CoE IIFR Lab and the Department of Basic Science and Humanities presented the Inter Section Business Plan Competition.
+
+Theme: Green Business for a Sustainable Future (renewable energy, sustainable products, green manufacturing).
+
+Only one submission per section. A maximum of 4 representatives per section may present during the final presentation.
+
+Date of submission start: 15th August 2026
+Last date of submission: 19th August 2026
+Final presentation: 20th August 2026 (Thursday)
+Presentation time: 7 minutes (5 minutes + 2 minutes)
+Result announcement: 21st August 2026
+
+Award and certificate for the Winner, 1st and 2nd Runner Up.
+
+Organizers: Dr. Subhamoy Banerjee, Dr. Chandan Adhikari, Dr. Ranabir Banik, Dr. Somnath Roy, Dr. Sukhendu Sadhukhan
+Organizing Chair: Dr. Prabir Kumar Das
+Student Coordinators: Debasish Mohanty, Subarna De, Soumik Nath, Ankush Banerjee, Sounak Chakrabarty, Suchona Saha
+
+Innovate Today. Build Tomorrow. Inspire Sustainable Change.`,
+    date: '2026-08-20',
+    imageUrl: '/business-plan-competition-2026-1.jpeg',
+    images: [
+      '/business-plan-competition-2026-1.jpeg',
+      '/business-plan-competition-2026-2.jpeg',
+      '/business-plan-competition-2026-3.jpeg',
+      '/business-plan-competition-2026-4.jpeg',
+      '/business-plan-competition-2026-5.jpeg',
+    ],
+    linkUrl: '/business-plan-competition-2026-flyer.jpeg',
+  },
+  {
     id: 'laser-engraving-workshop-2026',
     category: 'Workshop',
     title: 'Hands-On Workshop on Digital Manufacturing through Laser Engraving',
