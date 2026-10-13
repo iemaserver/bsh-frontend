@@ -3,6 +3,33 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'world-entrepreneurs-day-2026',
+    category: 'Talk',
+    title: 'World Entrepreneurs’ Day 2026 — Talk by Dr. Mita Tarafder',
+    description: `The Department of Basic Science and Humanities, IEM Kolkata, in association with IIC-IEM, successfully organized an online program on World Entrepreneurs’ Day 2026 featuring Dr. Mita Tarafder (Chief Scientist (Retd.), CSIR-NML and renowned social entrepreneur) as the eminent speaker.
+
+Theme: Innovation • Resilience • Inclusive Growth
+
+The event witnessed enthusiastic participation from students, making the session highly interactive and inspiring.
+
+Date & Time: Friday, 21st August 2026, 7 PM onwards
+Mode: Online programme
+
+About the Speaker: Dr. Mita Tarafder is Chief Scientist (Retd.), CSIR-National Metallurgical Laboratory (NML) and Professor of AcSIR (2012). She is Founder Trustee of the Relearn Foundation, which promotes education for underprivileged students, and a Mentor for Capacity Building for Design and Entrepreneurship at IIEST, Shibpur. She is a distinguished leader in science, innovation and social entrepreneurship.
+
+Key Highlights: Insights on Innovation and Entrepreneurship; Building a Sustainable and Inclusive Future; Role of Science & Technology in Social Progress.
+
+We sincerely thank Dr. Mita Tarafder for her valuable insights and the IEM-UEM Group for the continued support.
+
+Faculty Coordinators: Dr. Subhadip Chakraborty, Dr. Sudip Jana, Dr. Jeet Sen`,
+    date: '2026-08-21',
+    imageUrl: '/world-entrepreneurs-day-2026-1.jpeg',
+    images: [
+      '/world-entrepreneurs-day-2026-1.jpeg',
+    ],
+    linkUrl: '/world-entrepreneurs-day-2026-flyer.jpeg',
+  },
+  {
     id: 'smart-system-workshop-2026',
     category: 'Workshop',
     title: 'Build Your First Smart System — Explore Sensors, Actuators & Automation',
