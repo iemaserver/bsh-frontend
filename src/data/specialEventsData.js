@@ -3,6 +3,34 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'ieee-embs-installation-2026',
+    category: 'Clubs & Student Chapters',
+    title: 'Installation of the IEEE Engineering in Medicine and Biology Society (EMBS) Student Branch Chapter',
+    description: `The IEEE Engineering in Medicine and Biology Society (EMBS) Student Branch Chapter was installed at the Institute of Engineering & Management (IEM), Kolkata, under the IEEE Kolkata Section, on 12th October 2026 (4:15 PM onwards).
+
+The installation ceremony featured the ceremonial lamp lighting, IEEE Day celebration and a poster presentation session by students.
+
+Distinguished Guests
+
+We were honoured by the presence of:
+
+• Dr. Susanta Ray — Professor, Department of Electrical Engineering, Jadavpur University; Secretary, IEEE Kolkata Section.
+• Dr. Suparna Kar Chowdhury — Professor, Department of Electrical Engineering, Jadavpur University; Former Chair, IEEE Kolkata Section.
+• Dr. Manjunatha Mahadevappa — Professor, Department of Medical Science and Technology, IIT Kharagpur, and Senior Member of IEEE EMBS.
+• Dr. Sudip Kundu — Professor, Department of Biophysics, Molecular Biology and Bioinformatics, University of Calcutta.`,
+    date: '2026-10-12',
+    venue: 'Institute of Engineering & Management (IEM), Kolkata — IEEE Kolkata Section',
+    imageUrl: '/ieee-embs-installation-2026-1.jpeg',
+    images: [
+      '/ieee-embs-installation-2026-1.jpeg',
+      '/ieee-embs-installation-2026-2.jpeg',
+      '/ieee-embs-installation-2026-3.jpeg',
+      '/ieee-embs-installation-2026-4.jpeg',
+      '/ieee-embs-installation-2026-5.jpeg',
+      '/ieee-embs-installation-2026-6.jpeg',
+    ],
+  },
+  {
     id: 'when-friction-has-a-memory-2026',
     category: 'Talk',
     title: 'Popular Lecture: “When Friction has a Memory” — Dr. Mattia Coccolo',
