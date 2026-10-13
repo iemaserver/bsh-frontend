@@ -3,6 +3,37 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'smart-system-workshop-2026',
+    category: 'Workshop',
+    title: 'Build Your First Smart System — Explore Sensors, Actuators & Automation',
+    description: `IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented a hands-on workshop exclusively for B.Tech. first-year students: Build Your First Smart System — Explore Sensors, Actuators & Automation.
+
+Learn. Experiment. Build. Innovate. From Components to Real-World Applications.
+
+Sensors: Read the World. Actuators: Make Things Move. Automation: Bring Ideas to Life.
+
+Date & Time: 6th October 2026, 4:30 PM to 5:30 PM
+Venue: CII Auditorium, IEM Management House
+Instructor: Shivam Roy Chowdhury
+Seats: Limited, only 100
+Certificate: Certificate for all (will carry MAR points)
+Mandatory requirement: Participants needed to bring their own laptop and the Arduino Kit given by IEM.
+
+Organizers: Dr. Chandan Adhikari, Dr. Ranabir Banik, Dr. Somnath Roy, Dr. Sukhendu Sadhukhan
+Organizing Chair: Dr. Prabir Kumar Das
+
+Hands-on Learning. Real Skills. Brighter Future. Let's Build a Smarter Tomorrow!`,
+    date: '2026-10-06',
+    imageUrl: '/smart-system-workshop-2026-1.jpeg',
+    images: [
+      '/smart-system-workshop-2026-1.jpeg',
+      '/smart-system-workshop-2026-2.jpeg',
+      '/smart-system-workshop-2026-3.jpeg',
+      '/smart-system-workshop-2026-4.jpeg',
+    ],
+    linkUrl: '/smart-system-workshop-2026-flyer.jpeg',
+  },
+  {
     id: 'ieee-embs-installation-2026',
     category: 'Clubs & Student Chapters',
     title: 'Installation of the IEEE Engineering in Medicine and Biology Society (EMBS) Student Branch Chapter',
