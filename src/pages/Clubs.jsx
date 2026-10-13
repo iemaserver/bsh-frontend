@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Mail, Phone, Globe, ExternalLink, FileText } from 'lucide-react';
+import { Users, Mail, Phone, Globe, ExternalLink, FileText, Calendar, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
+import { SPECIAL_EVENTS_FALLBACK } from '@/data/specialEventsData';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -26,6 +27,10 @@ export default function Clubs() {
     useEffect(() => {
         if (contextClubs) setClubs(contextClubs);
     }, [contextClubs]);
+
+    const chapterEvents = SPECIAL_EVENTS_FALLBACK
+        .filter((e) => e.category === 'Clubs & Student Chapters')
+        .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
 
     return (
         <div className="min-h-screen pt-24 pb-16">
@@ -159,6 +164,56 @@ export default function Clubs() {
                     )}
                 </div>
             </section>
+
+            {chapterEvents.length > 0 && (
+                <section className="py-16">
+                    <div className="container mx-auto px-6 max-w-5xl">
+                        <h2 className="font-heading text-3xl font-bold text-center mb-10">
+                            Chapter Events &amp; Activities
+                        </h2>
+                        <div className="space-y-10">
+                            {chapterEvents.map((ev) => (
+                                <Card key={ev.id} className="overflow-hidden border-t-4 border-t-violet-500">
+                                    <CardContent className="p-6 md:p-8">
+                                        <h3 className="font-heading font-bold text-2xl mb-3">{ev.title}</h3>
+                                        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-5">
+                                            {ev.date && (
+                                                <span className="flex items-center gap-2">
+                                                    <Calendar className="w-4 h-4" />
+                                                    {new Date(ev.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
+                                                </span>
+                                            )}
+                                            {ev.venue && (
+                                                <span className="flex items-center gap-2">
+                                                    <MapPin className="w-4 h-4" />
+                                                    {ev.venue}
+                                                </span>
+                                            )}
+                                        </div>
+                                        <p className="text-muted-foreground leading-relaxed whitespace-pre-line mb-6">
+                                            {ev.description}
+                                        </p>
+                                        {ev.images && ev.images.length > 0 && (
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                {ev.images.map((img, i) => (
+                                                    <a key={i} href={img} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg bg-black/5">
+                                                        <img
+                                                            src={img}
+                                                            alt={`${ev.title} ${i + 1}`}
+                                                            className="w-full h-64 object-contain"
+                                                            loading="lazy"
+                                                        />
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             <section className="py-16 bg-muted/50">
                 <div className="container mx-auto px-6">
