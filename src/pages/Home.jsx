@@ -11,6 +11,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useData } from '@/hooks/useData';
 import hodImage from '@/assets/hod-prabir-kumar-das.jpg';
 import { GALLERY_FALLBACK } from '@/data/galleryData';
+import { SPECIAL_EVENTS_FALLBACK } from '@/data/specialEventsData';
+import { CONFERENCES_FALLBACK } from '@/data/conferencesData';
 
 const HOD_NAME = `Prof. Prabir Kumar Das`;
 
@@ -51,10 +53,37 @@ export default function Home() {
         events, 
         notices, 
         facilities,
-        gallery
+        gallery,
+        conferences
     } = useData();
 
-    const galleryImages = (gallery && gallery.length > 0) ? gallery : GALLERY_FALLBACK;
+    // Photo strip: gallery photos + every event and conference photo,
+    // de-duplicated and sorted from the latest to the oldest.
+    const galleryImages = (() => {
+        const galleryList = (gallery && gallery.length > 0) ? gallery : GALLERY_FALLBACK;
+        const eventList = (events && events.length > 0) ? events : SPECIAL_EVENTS_FALLBACK;
+        const confList = (conferences && conferences.length > 0) ? conferences : CONFERENCES_FALLBACK;
+
+        const all = [];
+        const pushPhoto = (id, title, date, url, order) => {
+            if (url) all.push({ id, title, imageUrl: url, date: date || '', order });
+        };
+        galleryList.forEach((g, i) => pushPhoto(`g-${g.id || i}`, g.title, g.date, g.imageUrl, i));
+        [...eventList.map((e) => ({ ...e, title: e.title })), ...confList.map((c) => ({ ...c, title: c.name || c.shortName }))]
+            .forEach((e, ei) => {
+                const urls = (e.images && e.images.length > 0) ? e.images : [e.imageUrl];
+                urls.forEach((u, i) => pushPhoto(`e-${e.id || ei}-${i}`, e.title, e.date, u, i));
+            });
+
+        const seen = new Set();
+        return all
+            .filter((p) => (seen.has(p.imageUrl) ? false : (seen.add(p.imageUrl), true)))
+            .sort((a, b) => {
+                const da = a.date ? new Date(a.date).getTime() : 0;
+                const db = b.date ? new Date(b.date).getTime() : 0;
+                return db - da || a.order - b.order;
+            });
+    })();
 
     const stats = [
         { icon: Users, label: 'Faculty Members', value: '55', suffix: '+' },
@@ -606,7 +635,10 @@ export default function Home() {
 
                 {galleryImages.length > 0 && (
                     <div className="relative">
-                        <div className="flex gap-4 gallery-scroll-track">
+                        <div
+                            className="flex gap-4 gallery-scroll-track"
+                            style={{ animationDuration: `${Math.max(40, galleryImages.length * 3)}s` }}
+                        >
                             {[...galleryImages, ...galleryImages].map((image, index) => (
                                 <Link
                                     to="/gallery"
@@ -616,6 +648,7 @@ export default function Home() {
                                     <img
                                         src={image.imageUrl}
                                         alt={image.title || 'Gallery image'}
+                                        loading="lazy"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </Link>
