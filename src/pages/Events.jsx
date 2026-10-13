@@ -10,7 +10,7 @@ import { CONFERENCES_FALLBACK } from '@/data/conferencesData';
 
 const EVENTS_FALLBACK = [...SPECIAL_EVENTS_FALLBACK, ...DISTINGUISHED_LECTURES_FALLBACK];
 
-const categories = ['All', 'Distinguished Lecture', 'Class', 'Industry Visit', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest', 'Conference', 'Photography and Art'];
+const categories = ['All', 'Distinguished Lecture', 'Class', 'Industry Visit', 'Olympiad', 'Workshop', 'Celebration', 'Competition', 'Social', 'Talk', 'Fest', 'Conference', 'Photography and Art', 'Clubs & Student Chapters'];
 
 export default function Events() {
     const { events: eventsData, conferences: conferencesData } = useData();
