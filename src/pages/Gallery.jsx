@@ -4,7 +4,7 @@ import { Image, Calendar, X, ChevronLeft, ChevronRight, Grid, LayoutGrid } from 
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useData } from '@/hooks/useData';
-import { GALLERY_FALLBACK } from '@/data/galleryData';
+import { getAllPhotos } from '@/data/allPhotos';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -24,11 +24,11 @@ export default function Gallery() {
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     
-    const { gallery: contextGallery } = useData();
+    const { gallery: contextGallery, events: contextEvents, conferences: contextConferences } = useData();
 
     useEffect(() => {
-        setImages((contextGallery && contextGallery.length > 0) ? contextGallery : GALLERY_FALLBACK);
-    }, [contextGallery]);
+        setImages(getAllPhotos({ gallery: contextGallery, events: contextEvents, conferences: contextConferences }));
+    }, [contextGallery, contextEvents, contextConferences]);
 
     const openLightbox = (image, index) => {
         setSelectedImage(image);
@@ -126,6 +126,7 @@ export default function Gallery() {
                                             <img
                                                 src={image.imageUrl}
                                                 alt={image.title || 'Gallery image'}
+                                                loading="lazy"
                                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                             />
                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
