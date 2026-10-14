@@ -3,6 +3,153 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'drone-assembly-workshop-2026',
+    category: 'Workshop',
+    title: 'Drone Assembly and Flight Control',
+    description: `IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented a hands-on workshop exclusively for B.Tech. students: Drone Assembly and Flight Control.
+
+Understand how individual components work together to achieve stable and controlled flight.
+
+Topics: Drone Components and Assembly; Electronics and Wiring; Flight Control and Calibration; Hands-on Practice and Flight Testing.
+
+Instructor: Pratim Chaterjee, DGCA approved Drone Instructor, Former U.A.V. Engineer and Instructor.
+
+Date & Time: 14th October 2026 (Wednesday), 4:15 PM to 5:30 PM
+Venue: CII Auditorium, IEM Management House
+Seats: Limited, only 80
+Certificate: Certificate for all participants (will carry MAR points)
+Mandatory requirement: Participants needed to bring their own laptop.
+
+Organizers: Dr. Chandan Adhikari, Dr. Sukhendu Sadhukhan, Dr. Somnath Roy, Dr. Ranabir Banik, Shivam Roy Chowdhury
+Organizing Chair: Dr. Prabir Kumar Das`,
+    date: '2026-10-14',
+    imageUrl: '/drone-assembly-workshop-2026-1.jpeg',
+    images: [
+      '/drone-assembly-workshop-2026-1.jpeg',
+      '/drone-assembly-workshop-2026-2.jpeg',
+      '/drone-assembly-workshop-2026-3.jpeg',
+      '/drone-assembly-workshop-2026-4.jpeg',
+      '/drone-assembly-workshop-2026-5.jpeg',
+      '/drone-assembly-workshop-2026-6.jpeg',
+    ],
+    linkUrl: '/drone-assembly-workshop-2026-flyer.jpeg',
+  },
+  {
+    id: 'world-entrepreneurs-day-2026',
+    category: 'Talk',
+    title: 'World Entrepreneurs’ Day 2026 — Talk by Dr. Mita Tarafder',
+    description: `The Department of Basic Science and Humanities, IEM Kolkata, in association with IIC-IEM, successfully organized an online program on World Entrepreneurs’ Day 2026 featuring Dr. Mita Tarafder (Chief Scientist (Retd.), CSIR-NML and renowned social entrepreneur) as the eminent speaker.
+
+Theme: Innovation • Resilience • Inclusive Growth
+
+The event witnessed enthusiastic participation from students, making the session highly interactive and inspiring.
+
+Date & Time: Friday, 21st August 2026, 7 PM onwards
+Mode: Online programme
+
+About the Speaker: Dr. Mita Tarafder is Chief Scientist (Retd.), CSIR-National Metallurgical Laboratory (NML) and Professor of AcSIR (2012). She is Founder Trustee of the Relearn Foundation, which promotes education for underprivileged students, and a Mentor for Capacity Building for Design and Entrepreneurship at IIEST, Shibpur. She is a distinguished leader in science, innovation and social entrepreneurship.
+
+Key Highlights: Insights on Innovation and Entrepreneurship; Building a Sustainable and Inclusive Future; Role of Science & Technology in Social Progress.
+
+We sincerely thank Dr. Mita Tarafder for her valuable insights and the IEM-UEM Group for the continued support.
+
+Faculty Coordinators: Dr. Subhadip Chakraborty, Dr. Sudip Jana, Dr. Jeet Sen`,
+    date: '2026-08-21',
+    imageUrl: '/world-entrepreneurs-day-2026-1.jpeg',
+    images: [
+      '/world-entrepreneurs-day-2026-1.jpeg',
+    ],
+    linkUrl: '/world-entrepreneurs-day-2026-flyer.jpeg',
+  },
+  {
+    id: 'smart-system-workshop-2026',
+    category: 'Workshop',
+    title: 'Build Your First Smart System — Explore Sensors, Actuators & Automation',
+    description: `IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented a hands-on workshop exclusively for B.Tech. first-year students: Build Your First Smart System — Explore Sensors, Actuators & Automation.
+
+Learn. Experiment. Build. Innovate. From Components to Real-World Applications.
+
+Sensors: Read the World. Actuators: Make Things Move. Automation: Bring Ideas to Life.
+
+Date & Time: 6th October 2026, 4:30 PM to 5:30 PM
+Venue: CII Auditorium, IEM Management House
+Instructor: Shivam Roy Chowdhury
+Seats: Limited, only 100
+Certificate: Certificate for all (will carry MAR points)
+Mandatory requirement: Participants needed to bring their own laptop and the Arduino Kit given by IEM.
+
+Organizers: Dr. Chandan Adhikari, Dr. Ranabir Banik, Dr. Somnath Roy, Dr. Sukhendu Sadhukhan
+Organizing Chair: Dr. Prabir Kumar Das
+
+Hands-on Learning. Real Skills. Brighter Future. Let's Build a Smarter Tomorrow!`,
+    date: '2026-10-06',
+    imageUrl: '/smart-system-workshop-2026-1.jpeg',
+    images: [
+      '/smart-system-workshop-2026-1.jpeg',
+      '/smart-system-workshop-2026-2.jpeg',
+      '/smart-system-workshop-2026-3.jpeg',
+      '/smart-system-workshop-2026-4.jpeg',
+    ],
+    linkUrl: '/smart-system-workshop-2026-flyer.jpeg',
+  },
+  {
+    id: 'ieee-embs-installation-2026',
+    category: 'Clubs & Student Chapters',
+    title: 'Installation of the IEEE Engineering in Medicine and Biology Society (EMBS) Student Branch Chapter',
+    description: `The IEEE Engineering in Medicine and Biology Society (EMBS) Student Branch Chapter was installed at the Institute of Engineering & Management (IEM), Kolkata, under the IEEE Kolkata Section, on 12th October 2026 (4:15 PM onwards).
+
+The installation ceremony featured the ceremonial lamp lighting, IEEE Day celebration and a poster presentation session by students.
+
+Distinguished Guests
+
+We were honoured by the presence of:
+
+• Dr. Susanta Ray — Professor, Department of Electrical Engineering, Jadavpur University; Secretary, IEEE Kolkata Section.
+• Dr. Suparna Kar Chowdhury — Professor, Department of Electrical Engineering, Jadavpur University; Former Chair, IEEE Kolkata Section.
+• Dr. Manjunatha Mahadevappa — Professor, Department of Medical Science and Technology, IIT Kharagpur, and Senior Member of IEEE EMBS.
+• Dr. Sudip Kundu — Professor, Department of Biophysics, Molecular Biology and Bioinformatics, University of Calcutta.`,
+    date: '2026-10-12',
+    venue: 'Institute of Engineering & Management (IEM), Kolkata — IEEE Kolkata Section',
+    imageUrl: '/ieee-embs-installation-2026-1.jpeg',
+    images: [
+      '/ieee-embs-installation-2026-1.jpeg',
+      '/ieee-embs-installation-2026-2.jpeg',
+      '/ieee-embs-installation-2026-3.jpeg',
+      '/ieee-embs-installation-2026-4.jpeg',
+      '/ieee-embs-installation-2026-5.jpeg',
+      '/ieee-embs-installation-2026-6.jpeg',
+    ],
+  },
+  {
+    id: 'when-friction-has-a-memory-2026',
+    category: 'Talk',
+    title: 'Popular Lecture: “When Friction has a Memory” — Dr. Mattia Coccolo',
+    description: `IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented a popular lecture, “When Friction has a Memory”, as part of the Foreign Lecture Series from CoE IIFR Lab, Department of Basic Science and Humanities.
+
+Speaker: Dr. Mattia Coccolo, Associate Professor of Applied Physics at Universidad Rey Juan Carlos (URJC), Madrid, Spain.
+
+About the Talk: Friction is not just a force opposing motion — it can also “remember” its past. In this engaging lecture, Dr. Mattia Coccolo explored the fascinating concept of memory effects in friction, their physical origins, and their implications in modern science and engineering. The talk was accessible to a broad audience and highlighted how this phenomenon connects fundamental physics with real-world applications.
+
+Topics: Tribology, Memory Effects, Materials Physics, Nonlinear Dynamics, Real-World Applications.
+
+Date & Time: 30th September 2026, 7:30 PM to 8:30 PM
+Mode: Online through Google Meet
+Seats: Limited, only 130
+Certificate: Certificate for all participants (will carry MAR points)
+
+Organizers: Dr. Somnath Roy, Dr. Chandan Adhikari, Dr. Ranabir Banik, Dr. Sukhendu Sadhukhan
+Organizing Chair: Dr. Prabir Kumar Das`,
+    date: '2026-09-30',
+    imageUrl: '/when-friction-has-a-memory-2026-1.jpeg',
+    images: [
+      '/when-friction-has-a-memory-2026-1.jpeg',
+      '/when-friction-has-a-memory-2026-2.jpeg',
+      '/when-friction-has-a-memory-2026-3.jpeg',
+      '/when-friction-has-a-memory-2026-4.jpeg',
+    ],
+    linkUrl: '/when-friction-has-a-memory-2026-flyer.jpeg',
+  },
+  {
     id: 'drone-workshop-2026',
     category: 'Workshop',
     title: 'Decode the Drone: Anatomy, Electronics & Flight',
