@@ -3,6 +3,35 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'big-green-durga-2026',
+    category: 'Celebration',
+    title: 'BIG Green Durga 2026 @ IEM',
+    description: `The Department of Basic Science and Humanities, IEM Salt Lake, in association with 92.7 BIG FM, successfully organised a vibrant celebration of Durga Puja, culture and sustainability on 22nd September 2026.
+
+Green Choices, Brighter Tomorrows.
+
+Date: 22nd September 2026
+Time: 5:00 PM – 6:30 PM
+Venue: IEM Salt Lake Management House
+
+With 400+ enthusiastic students participating in song, recitation, dance, quizzes and other talent activities, the event beautifully brought together tradition, creativity and the Go Green spirit.
+
+Activities: Quizzes and Puja-themed challenges; Green Durga and sustainability activities; Music; Talent-based activities; Photo/selfie zone; Giveaways, prizes and much more.
+
+Heartfelt thanks to the IEM-UEM Group for encouraging and supporting such meaningful initiatives.
+
+Organised by: Prof. Dr. Samapika Das Biswas, Prof. Dr. Sourav Adhikary, Prof. Dr. Souvik Mondal, Prof. Dr. Saheli Sengupta, Prof. Dr. Subhadip Chakraborty
+
+Celebrate | Create | Connect | Go Green`,
+    date: '2026-09-22',
+    venue: 'IEM Salt Lake Management House',
+    imageUrl: '/big-green-durga-2026-1.jpeg',
+    images: [
+      '/big-green-durga-2026-1.jpeg',
+    ],
+    linkUrl: '/big-green-durga-2026-flyer.jpeg',
+  },
+  {
     id: 'drone-assembly-workshop-2026',
     category: 'Workshop',
     title: 'Drone Assembly and Flight Control',
