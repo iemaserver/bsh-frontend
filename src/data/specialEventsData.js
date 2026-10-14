@@ -3,6 +3,41 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'mission-moon-lunar-base-design-challenge-2026',
+    category: 'Celebration',
+    title: 'National Space Day Celebration 2026 — Mission Moon: Lunar Base Design Challenge',
+    description: `CoE IIFR Lab, IIC IEM and the Department of Basic Science and Humanities presented the National Space Day Celebration 2026 — Mission Moon: Lunar Base Design Challenge.
+
+Participants had to design a lunar base that addresses energy, water, oxygen, food, communication and waste management.
+
+Date of submission start: 16th August 2026
+Last date of submission: 20th August 2026
+Result announcement: 24th August 2026
+
+Certificate for all (will carry MAR points and will make your CV strong).
+Awards for the Winner and the 1st and 2nd Runner Up.
+
+Why participate? Real-world problem solving; innovate for the future; enhance your skills and portfolio; make your CV stand out; be a part of India's space vision.
+
+The winners of this challenge, together with those of the FutureX Design Challenge and the Inter Section Business Plan Competition, received their certificates at the Certificate Distribution Ceremony on 8th October 2026 (photographs below).
+
+Organizers: Dr. Chandan Adhikari, Dr. Ranabir Banik, Dr. Somnath Roy, Dr. Sukhendu Sadhukhan
+Organizing Chair: Dr. Prabir Kumar Das
+Student Coordinators: Debasish Mohanty, Subarna De, Soumik Nath, Ankush Banerjee, Sounak Chakrabarty
+
+Dream Big. Design Bold. Build the Future Beyond Earth!`,
+    date: '2026-10-08',
+    imageUrl: '/mission-moon-2026-1.jpeg',
+    images: [
+      '/mission-moon-2026-1.jpeg',
+      '/mission-moon-2026-2.jpeg',
+      '/mission-moon-2026-3.jpeg',
+      '/mission-moon-2026-4.jpeg',
+      '/mission-moon-2026-5.jpeg',
+    ],
+    linkUrl: '/mission-moon-2026-flyer.jpeg',
+  },
+  {
     id: 'big-green-durga-2026',
     category: 'Celebration',
     title: 'BIG Green Durga 2026 @ IEM',
