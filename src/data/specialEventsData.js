@@ -3,6 +3,37 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'raman-distinguished-lecture-2026',
+    category: 'Talk',
+    title: 'Online Distinguished Lecture Commemorating the Birthday of Sir C. V. Raman',
+    description: `The Department of Basic Science and Humanities, IEM Salt Lake, Kolkata, organizes an online distinguished lecture celebrating the legacy of Nobel Laureate Sir C. V. Raman.
+
+Talk: Enhancing Raman Spectroscopy: From Molecular Fingerprinting to Chirality Detection
+
+Speaker: Dr. Debraj Gangopadhyay
+Associate Scientist, Institute of Organic Chemistry and Biochemistry, Prague, Czech Republic
+
+Date: Saturday, 7 November 2026
+Time: 2:00 PM IST onwards
+Mode: Online via Google Meet
+Please register yourself.
+
+Participation certificates (with MAR points) will be awarded to attendees present throughout the session.
+
+Faculty Coordinators:
+Dr. Subhadip Chakraborty — 9830887841
+Dr. Sangeeta Das — 9038045206
+Dr. Saheli Sengupta — 6290914264
+Dr. Anisha Purkait — 9903854630`,
+    date: '2026-11-07',
+    imageUrl: '/raman-distinguished-lecture-2026-flyer.jpeg',
+    links: [
+      { label: 'Register Here', url: 'https://forms.gle/dLPWYTjhHYaVP97A9' },
+      { label: 'Join on Google Meet', url: 'https://meet.google.com/gsq-ibuf-kxn?hs=224' },
+    ],
+    linkUrl: '/raman-distinguished-lecture-2026-flyer.jpeg',
+  },
+  {
     id: 'mission-moon-lunar-base-design-challenge-2026',
     category: 'Celebration',
     title: 'National Space Day Celebration 2026 — Mission Moon: Lunar Base Design Challenge',
