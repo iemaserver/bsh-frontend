@@ -316,6 +316,21 @@ export default function Events() {
                                         <span className="font-semibold">Venue:</span> {selectedEvent.venue}
                                     </p>
                                 )}
+                                {selectedEvent.links && selectedEvent.links.length > 0 && (
+                                    <div className="flex flex-wrap gap-3 mt-6">
+                                        {selectedEvent.links.map((l) => (
+                                            <a
+                                                key={l.url}
+                                                href={l.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+                                            >
+                                                {l.label} <ExternalLink className="w-4 h-4" />
+                                            </a>
+                                        ))}
+                                    </div>
+                                )}
                                 {selectedEvent.linkUrl && (
                                     <a
                                         href={selectedEvent.linkUrl}
