@@ -3,6 +3,30 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'iematics-2026',
+    category: 'Competition',
+    title: 'IEMATICS — 9th Online International Mathematics Olympiad 2026',
+    description: `We are very proud to announce that the Society for Makers, Artists, Researchers and Technologists (SMART), USA presents IEMATICS — the Ninth Online International Mathematics Olympiad, sponsored by Institute of Engineering & Management (IEM) in association with the Department of Basic Science and Humanities, IEM, Kolkata and the Society for Data Science (S4DS) IEM Student Chapter.
+
+Students and Mathematics lovers from different spheres are cordially welcomed.
+
+Event date: 31st October 2026
+Time: The online contest starts at 7:00 PM IST and closes at 10:00 PM IST on the day of the contest.
+Registration: Participation is free of cost.
+
+Participants need to register through the registration link provided on the website and should participate in the contest through the contest link at 7:00 PM IST on 31st October 2026.
+
+Prizes worth 300 USD will be given to the top 3 participants along with a certificate of excellence. Participants who solve at least three questions will get a certificate of merit.
+
+For detailed information, visit https://iematics.smartsociety.org/`,
+    date: '2026-10-31',
+    imageUrl: '/iematics-2026-flyer.jpeg',
+    links: [
+      { label: 'Register / Visit IEMATICS Website', url: 'https://iematics.smartsociety.org/' },
+    ],
+    linkUrl: '/iematics-2026-flyer.jpeg',
+  },
+  {
     id: 'raman-distinguished-lecture-2026',
     category: 'Talk',
     title: 'Online Distinguished Lecture Commemorating the Birthday of Sir C. V. Raman',
