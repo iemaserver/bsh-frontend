@@ -3,6 +3,42 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'world-diabetes-day-2026',
+    category: 'Distinguished Lecture',
+    title: 'World Diabetes Day 2026 — Online Distinguished Lecture: Early Action on Diabetes',
+    description: `WORLD DIABETES DAY 2026
+Theme: EARLY ACTION ON DIABETES
+
+Date: 14 November 2026 (Saturday)
+Time: 2:00 PM onwards
+Mode: Online
+
+IEEE EMBS IEM Student Chapter, in association with the Department of Basic Science and Humanities, IEM Kolkata, presents an Online Distinguished Lecture.
+
+Speaker: Dr. Soumyabrata Roy Chaudhuri
+• Consultant Endocrinologist & Diabetologist
+• Adjunct Faculty, School of Public Health, University of Newcastle, Australia
+• Faculty, KPC Medical College & Hospitals, Kolkata
+• Consultant, Anandalok, Woodlands & Ruby General Hospital, Kolkata
+
+Faculty Coordinator: Dr. Subhadip Chakraborty
+Faculty Advisors: Dr. Prabir Kumar Das & Dr. Debasmita Bhattacharya
+
+E-certificates for all participants.
+
+Organised by: IEEE EMBS IEM Student Chapter
+In association with: Department of Basic Science and Humanities, IEM Kolkata
+
+Act Early. Live Better.`,
+    date: '2026-11-14',
+    imageUrl: '/world-diabetes-day-2026-flyer.jpeg',
+    links: [
+      { label: 'Register Here', url: 'https://forms.gle/j8uDqiP1F9rqb2wp7' },
+      { label: 'Join Zoom', url: 'https://us06web.zoom.us/j/2997723153?pwd=uxxlyc586mclqOiQPsRf6t3KacbQm8.1' },
+    ],
+    linkUrl: '/world-diabetes-day-2026-flyer.jpeg',
+  },
+  {
     id: 'tech-glow-2026',
     category: 'Fest',
     title: 'TECH GLOW 2026 — Diwali Meet • Tech Exhibition • Panel Discussion',
