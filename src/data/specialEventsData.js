@@ -65,29 +65,23 @@ Prof. Samapika Das Biswas, Prof. Debasmita Bhattacharya, Prof. Ranabir Banik, Pr
     id: 'world-science-day-lecture-2026',
     category: 'Distinguished Lecture',
     title: 'Distinguished Lecture: Computing for Peace and Sustainable Development — Ts. Dr. Thamil Vaani Arvaree',
-    description: `The Department of Basic Science and Humanities, Institute of Engineering & Management, Salt Lake, organizes a Distinguished Lecture in collaboration with the IEM Society of Physics Students Chapter, an organisation of the American Institute of Physics, and the Rotary Club of Salt Lake Silicon Valley.
+    description: `The Department of Basic Science and Humanities, IEM Kolkata, in collaboration with the IEM Society of Physics Students Chapter (in association with American Institute of Physics) and the Rotary Club of Salt Lake Silicon Valley, successfully organized a Distinguished Lecture on 10 November 2026, celebrating World Science Day for Peace and Development, with around 100 participants.
 
-Theme: World Science Day (Peace and Development)
+Ts. Dr. Thamil Vaani Arvaree, Assistant Professor, University of Nottingham Malaysia, delivered an insightful lecture on “Computing for Peace and Sustainable Development: Turning Science into Solutions for People and Planet.” The session covered how computing supports the Sustainable Development Goals, from smart agriculture and food security to science diplomacy and cybersecurity. It also highlighted that technology alone does not achieve sustainability; policy, skills and community participation matter equally.
 
-Lecture Topic: Computing for Peace and Sustainable Development: Turning Science into Solutions for People and Planet
+We sincerely thank our respected President Madam, Prof. Banani Chakrabarti, our Director Sir, Prof. Satyajit Chakrabarti, and HOD, BSH, Prof. Prabir Kumar Das, for their constant encouragement and support. We are also grateful to our Assistant HODs, BSH, Prof. Ranabir Banik and Prof. Samapika Das Biswas for their guidance.
 
-Speaker: Ts. Dr. Thamil Vaani Arvaree, Assistant Professor, University of Nottingham Malaysia
+Our heartfelt thanks to Prof. Debasmita Bhattacharya and Prof. Biswadip Basu Mallik for conducting the session so smoothly. We are also grateful to Prof. Arnab Basu for his timely help, and to the Organiser Team, Prof. Soumyadipta Pal, Prof. Amit Nandi and Prof. Sayan Paul, for their efforts.
 
-Date: 10th November 2026 (Tuesday)
-Time: 11:00 AM
-Mode: Online via Zoom
-Meeting ID: 489 740 6939 | Passcode: 315321
-First Come First Serve.
-
-Chief Patron: Prof. Prabir Kumar Das
-Patron: Prof. Ranabir Banik, Prof. Samapika Das Biswas
-Session Chair: Prof. Biswadip Basu Mallik
-Faculty Coordinator: Prof. Debasmita Bhattacharya
-Organiser Team: Prof. Soumyadipta Pal, Prof. Amit Nandi, Prof. Sayan Paul`,
+We thank all BSH faculty members for encouraging students to participate, and all our participants for making the event a success.`,
     date: '2026-11-10',
     imageUrl: '/world-science-day-lecture-2026-flyer.jpeg',
-    links: [
-      { label: 'Join via Zoom', url: 'https://us06web.zoom.us/j/4897406939?pwd=Vgb321qqGzsbdNyslqmAvnFibdPQRt.1' },
+    images: [
+      '/world-science-day-lecture-2026-flyer.jpeg',
+      '/world-science-day-lecture-2026-1.jpeg',
+      '/world-science-day-lecture-2026-2.jpeg',
+      '/world-science-day-lecture-2026-3.jpeg',
+      '/world-science-day-lecture-2026-4.jpeg',
     ],
     linkUrl: '/world-science-day-lecture-2026-flyer.jpeg',
   },
