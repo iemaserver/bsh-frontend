@@ -3,6 +3,65 @@
 
 export const SPECIAL_EVENTS_FALLBACK = [
   {
+    id: 'tech-glow-2026',
+    category: 'Fest',
+    title: 'TECH GLOW 2026 — Diwali Meet • Tech Exhibition • Panel Discussion',
+    description: `TECH GLOW 2026, held on 5th November 2026 at the CII Auditorium, IEM Management House, was successfully completed with great enthusiasm, participation and a wonderful spirit of togetherness. Organized by the Department of Basic Science and Humanities, Institute of Engineering & Management, Kolkata, from 3 PM to 5 PM.
+
+The event was a memorable confluence of Technology, Innovation, Artificial Intelligence, Research and Diwali Celebrations, featuring an excellent Technical Poster Exhibition, an impressive Project and Technology Exhibition, an engaging panel discussion on Artificial Intelligence, a Diwali Meet with distinguished external delegates from academia, industry and government, and a vibrant cultural programme.
+
+The Technical Poster Exhibition was particularly impressive, with students and researchers showcasing their research work, innovative ideas and technological perspectives. The quality of the posters, creativity of presentation and enthusiasm of the participants made it a significant academic highlight of the event.
+
+The Project and Technology Exhibition was another major attraction, with outstanding student projects, working models, prototypes and innovative technological solutions demonstrating the creativity and technical capabilities of our students.
+
+The panel discussion, titled "AI Unplugged: Opportunities, Challenges and the Road Ahead," was one of the key highlights of TECH GLOW 2026. We were privileged to have an eminent panel of experts:
+
+• Prof. Dr. Satyajit Chakrabarti – Vice-Chancellor, UEM Kolkata and Director, IEM.
+• Mr. Sayan Guha – Director – Global AI & Data Science Practice, Capgemini.
+• Dr. Sandipan Sarkar – Global Technology Executive – Data & AI, Hybrid Cloud Transformation, IBM.
+• Mr. Eshwar Boini – Co-Founder, XEdugIT & Building Quper.
+
+The session was gracefully moderated by Mr. Diptiman Dasgupta, COO, IEM-UEM. The insightful deliberations on the transformative role of AI, its opportunities, challenges, ethical dimensions and future impact on education and industry made the discussion extremely enriching.
+
+The Diwali Meet provided a wonderful opportunity to interact with distinguished external delegates and strengthen our relationships with academia, industry and government representatives. The cultural programme added a special charm to the occasion, with wonderful musical, dance and artistic performances that reflected the immense talent and creative spirit of our IEM-UEM fraternity. It was truly a delightful celebration of our institutional family and the festive spirit of Diwali.
+
+Our heartfelt gratitude to the Hon'ble President Madam for her constant encouragement, blessings and support, and to the Hon'ble VC Sir for his invaluable guidance, motivation and vision, which made this initiative possible.
+
+Special Thanks to:
+
+Prof. Amit Das (Dean – Consultancy), Prof. Emona Dutta, Prof. Sayoni Das, Prof. Arnab Basu, Prof. Santanu Das and Prof. Sayan Paul for their valuable support and contributions in various activities and arrangements related to the event.
+
+Prof. Sukhendu Sadhukhan, Prof. Somnath Roy, Prof. Siddhartha Biswas, Mr. Pratim Chatterjee and Mr. Shivam Roy Choudhury for their outstanding support, dedication and tireless efforts in making the Project and Technology Exhibition truly excellent and impressive.
+
+Prof. Koyel Ganguly, Assistant Registrar, for her wonderful anchoring and for conducting the programme so gracefully and seamlessly.
+
+Sincere thanks to all the members of the Department of Basic Science and Humanities, as well as colleagues from other departments, who extended their support, invited distinguished guests, coordinated various activities and graced the occasion with their presence. Your collective participation made the event a grand success.
+
+It was the collective commitment, coordination, teamwork and tireless efforts of this team that helped conceptualize and execute the programme successfully.
+
+We also extend our sincere appreciation to all our esteemed panelists, external delegates, academic and industry representatives, government officials, collaborators, participating students, faculty members, cultural performers and the entire IEM-UEM fraternity for making the occasion so special.
+
+TECH GLOW 2026 was not merely an event; it was a celebration of ideas, innovation, academic excellence, creativity, collaboration and relationships. The enthusiasm and cooperation demonstrated by everyone reaffirm our belief that great achievements are possible when we work together with a shared vision.
+
+With heartfelt thanks and warm regards,
+
+Prof. Samapika Das Biswas, Prof. Debasmita Bhattacharya, Prof. Ranabir Banik, Prof. Chandan Adhikari, Prof. Animesh Kundu, Prof. Prabir Kumar Das`,
+    date: '2026-11-05',
+    venue: 'CII Auditorium, IEM Management House',
+    imageUrl: '/tech-glow-2026-1.jpeg',
+    images: [
+      '/tech-glow-2026-1.jpeg',
+      '/tech-glow-2026-2.jpeg',
+      '/tech-glow-2026-3.jpeg',
+      '/tech-glow-2026-4.jpeg',
+      '/tech-glow-2026-5.jpeg',
+      '/tech-glow-2026-6.jpeg',
+      '/tech-glow-2026-7.jpeg',
+      '/tech-glow-2026-8.jpeg',
+    ],
+    linkUrl: '/tech-glow-2026-flyer.jpeg',
+  },
+  {
     id: 'world-science-day-lecture-2026',
     category: 'Distinguished Lecture',
     title: 'Distinguished Lecture: Computing for Peace and Sustainable Development — Ts. Dr. Thamil Vaani Arvaree',
