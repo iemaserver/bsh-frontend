@@ -98,6 +98,42 @@ Prof. Samapika Das Biswas, Prof. Debasmita Bhattacharya, Prof. Ranabir Banik, Pr
     linkUrl: '/tech-glow-2026-flyer.jpeg',
   },
   {
+    id: 'iks-khamti-ramayana-lecture-2026',
+    category: 'Distinguished Lecture',
+    title: 'IKS Outreach Lecture Series: Indigenous Retellings of the Rama Story — The Khamti Ramayana',
+    description: `The Department of Basic Science and Humanities, Institute of Engineering & Management (IEM), Kolkata, organised an online lecture on 5 November 2026 as part of its Indian Knowledge Systems (IKS) Outreach Lecture Series. The session featured Dr. Dhurjjati Sarma, Assistant Professor in the Department of Modern Indian Languages and Literary Studies, Gauhati University. The lecture, titled “Indigenous Retellings of the Rama Story: The Khamti Ramayana,” explored the distinctive narrative features and religious-cultural contexts of the Tai-Khamti retelling of the Rama story.
+
+The programme was conducted online through Google Meet. Around 90 participants joined the session.
+
+Major Themes and Points Discussed
+
+The lecture situated the Khamti Ramayana within a wider field of heterodox and regional Ramayana traditions. The discussion highlighted the influence of Jain and Buddhist narrative traditions and the ways in which these retellings rework elements familiar from classical versions of the Rama story.
+
+• Heterodox narrative traditions: The Khamti Ramayana was discussed in relation to the Paumacariyam and the Jain tradition, with attention to the reworking or stripping away of elements of classical myth.
+• Buddhist reinterpretation: The Buddhist tradition was noted for questioning the avatara concept. Rama is represented as a Buddha-in-the-making, and the narrative is framed as a sermon delivered directly by Gautama Buddha.
+• Intertextual connections: The lecture drew attention to intersections with Buddhist Jataka narratives, particularly the Anamaka Jataka and the Dasaratha Jataka.
+• Distinctive narrative details: The period of Rama’s exile is twelve years, a feature noted as comparable to a number of Southeast Asian versions. Another striking variation discussed was the representation of Sita as the daughter of Ravana.
+• Tai-Khamti transmission: The tradition was identified in the notes as “Lik Chao Lamang” (also recorded as “Cao-Alang-Lamang”), preserved by the Tai-Khamti people, a Theravada Buddhist community primarily residing in the Namsai and Changlang districts of Arunachal Pradesh.
+• Departure from the Valmiki framework: Valmiki is absent from this narrative account, and names and narrative designations differ from those in familiar versions.
+• Regional literary influence: The discussion also noted a strong influence of the Krittivasi Ramayana, indicating the layered and intersecting nature of regional Ramayana traditions.
+
+Significance of the Lecture
+
+The lecture underscored that the Rama story is not a singular or uniform narrative but a dynamic body of literary and religious traditions shaped by local communities, languages, belief systems, and performance or storytelling practices. The Khamti account offers an important example of how the Rama narrative is reinterpreted through a Theravada Buddhist worldview and through exchanges among Jain, Buddhist, and regional literary traditions. The discussion therefore contributed to a broader understanding of the plurality of India’s knowledge and literary traditions, a central concern of the IKS Outreach Lecture Series.
+
+Conclusion
+
+The session offered participants an opportunity to engage with a distinctive Tai-Khamti retelling of the Rama story and to consider the intersections among regional, Jain, Buddhist, and other South and Southeast Asian narrative traditions. By foregrounding the variations in characterisation, narrative structure, and religious interpretation, the lecture highlighted the value of documenting and studying diverse Ramayana traditions as part of India’s plural literary and intellectual heritage.`,
+    date: '2026-11-05',
+    imageUrl: '/iks-khamti-ramayana-lecture-2026-flyer.jpeg',
+    images: [
+      '/iks-khamti-ramayana-lecture-2026-flyer.jpeg',
+      '/iks-khamti-ramayana-lecture-2026-1.jpeg',
+      '/iks-khamti-ramayana-lecture-2026-2.jpeg',
+    ],
+    linkUrl: '/iks-khamti-ramayana-lecture-2026-flyer.jpeg',
+  },
+  {
     id: 'world-science-day-lecture-2026',
     category: 'Distinguished Lecture',
     title: 'Distinguished Lecture: Computing for Peace and Sustainable Development — Ts. Dr. Thamil Vaani Arvaree',
