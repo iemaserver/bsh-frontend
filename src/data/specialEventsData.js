@@ -134,6 +134,23 @@ The session offered participants an opportunity to engage with a distinctive Tai
     linkUrl: '/iks-khamti-ramayana-lecture-2026-flyer.jpeg',
   },
   {
+    id: 'sun-distinguished-lecture-2026',
+    category: 'Distinguished Lecture',
+    title: 'Distinguished Lecture: Our Sun — Exploring the Physics of a Star — Dr. Rakesh Mazumder',
+    description: `Department of Basic Science & Humanities, Institute of Engineering and Management (IEM), Kolkata, successfully arranged a distinguished lecture titled “Our Sun: Exploring the Physics of a Star” on 9th October 2026. The lecture was held at the CII Auditorium of the Management House and lasted 45 minutes. Dr Rakesh Mazumder, Curator, BITM, a unit of the National Council of Science Museums, under the Ministry of Culture, Government of India, presented an interesting and informative lecture on the primary background of solar astronomy. His scientific discussion, along with interesting videos on the solar atmosphere during his lecture, highlighted the importance and recent trends of solar-physics research. Nearly 200 students and many faculty members attended the lecture. The participants actively involved with the insightful discussion and obtained general aspects on the solar environment, its atmosphere and new ongoing research in this field.`,
+    date: '2026-10-09',
+    imageUrl: '/sun-distinguished-lecture-2026-flyer.jpeg',
+    images: [
+      '/sun-distinguished-lecture-2026-flyer.jpeg',
+      '/sun-distinguished-lecture-2026-1.jpeg',
+      '/sun-distinguished-lecture-2026-2.jpeg',
+      '/sun-distinguished-lecture-2026-3.jpeg',
+      '/sun-distinguished-lecture-2026-4.jpeg',
+      '/sun-distinguished-lecture-2026-5.jpeg',
+    ],
+    linkUrl: '/sun-distinguished-lecture-2026-flyer.jpeg',
+  },
+  {
     id: 'world-science-day-lecture-2026',
     category: 'Distinguished Lecture',
     title: 'Distinguished Lecture: Computing for Peace and Sustainable Development — Ts. Dr. Thamil Vaani Arvaree',
